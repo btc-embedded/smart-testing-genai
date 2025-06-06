@@ -1,0 +1,70 @@
+name: BTC Tests
+
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+
+permissions:
+  contents: write
+  actions: read
+  checks: write
+  pull-requests: write
+
+jobs:
+  btc-tests:
+    name: Test execution
+    runs-on: self-hosted
+    if: ${{
+        contains(github.event.head_commit.message, '#ci') ||
+        github.event_name == 'workflow_dispatch'  ||
+        github.event_name == 'pull_request'
+        }}
+
+    steps:
+    # (1) --- Checkout the repository ---
+    - name: Checkout files
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    # (2) --- Run the tests ---
+    - name: Run tests
+      shell: powershell
+      run: |
+        python test/run_tests.py
+
+    # (3) --- Publish HTML Report to GitHub pages ---
+    - name: Publish test results to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: reports
+     
+    # (4) --- Publish test results ---
+    - name: Publish results
+      uses: dorny/test-reporter@v1
+      if: success() || failure()
+      with:
+        name: Test results
+        path: reports/test_results.xml
+        reporter: jest-junit
+        only-summary: 'false'
+
+    # (5) --- Add test report link to PR ---
+    - name: Add test report link to PR
+      if: always() && github.event_name == 'pull_request'
+      run: |
+        $REPORT_URL = "https://btc-embedded.github.io/$env:GITHUB_REPOSITORY_NAME/report.html"
+        $API_URL = "https://api.github.com/repos/$env:GITHUB_REPOSITORY/issues/$env:GITHUB_EVENT_NUMBER/comments"
+        $headers = @{
+            "Authorization" = "Bearer $env:GITHUB_TOKEN"
+            "Accept" = "application/vnd.github+json"
+        }
+        $body = @{ body = "Test report: [View Report]($REPORT_URL)" } | ConvertTo-Json -Compress
+        Invoke-RestMethod -Uri $API_URL -Method Post -Headers $headers -Body $body -ContentType "application/json"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_REPOSITORY: ${{ github.repository }}
+        GITHUB_REPOSITORY_NAME: ${{ github.event.repository.name }}
+        GITHUB_EVENT_NUMBER: ${{ github.event.number }}

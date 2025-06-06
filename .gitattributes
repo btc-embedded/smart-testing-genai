@@ -1,0 +1,3 @@
+test/*_btcdata/model/**/* -diff
+test/*_btcdata/testcases/*.ui_settings.tc.json -diff
+test/*_btcdata/preferences.json -diff

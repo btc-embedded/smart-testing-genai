@@ -1,0 +1,26 @@
+
+# Simulink
+**/slprj/
+*.slxc
+*.slx.autosave
+*.mex64
+*.mexw64
+*_rtw/
+
+# TargetLink
+TLBuild/
+TLProj/
+TLSim/
+tl_clean.bat
+
+# BTC
+ep_sim/
+*.bak
+*_ep_stubs/
+test/*_btcdata/.cache
+
+# Python
+__pycache__/
+*.pyc
+
+reports/
