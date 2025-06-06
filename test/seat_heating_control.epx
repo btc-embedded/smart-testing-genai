@@ -1,0 +1,60 @@
+{
+  "Profile" : {
+    "Version" : "25.2p0",
+    "Creator" : "developer",
+    "Creation Date" : "6 Jun 2025, 15:47",
+    "Modifier" : "developer",
+    "Modification Date" : "6 Jun 2025, 15:53",
+    "Creation Tool Version" : "25.2p0",
+    "OS" : "Windows",
+    "Path" : "file:/E:/work/smart-testing-genai/test/seat_heating_control.epx"
+  },
+  "Compiler" : {
+    "Name" : "mingw64",
+    "Info" : "MinGW64 Compiler (C) (8.1.0)",
+    "Bitsize" : 64,
+    "Replaceable" : false,
+    "Default" : true
+  },
+  "Architectures" : {
+    "Simulink" : {
+      "Creator" : "nabilekhoury",
+      "Import Date" : "06/06/2025 15:47",
+      "Matlab Version" : "Matlab 24.2 (R2024b)",
+      "Simulink Version" : "Simulink 24.2 (R2024b)",
+      "Model Creation Date" : "15/06/2021 12:12",
+      "Model Version" : "12.6",
+      "Model File" : "file:/E:/work/smart-testing-genai/model/seat_heating_control.slx",
+      "Init Script" : "",
+      "Additional Model Information" : "",
+      "Architecture" : "Simulink Top Level",
+      "Parameters" : "ON",
+      "Visibility" : "BLACK_BOX",
+      "Conversion Target" : "EC"
+    },
+    "Simulink Subsystem References" : [ {
+      "Model File" : "file:/E:/work/smart-testing-genai/model/button_to_temp_stage.slx",
+      "Last Saved" : "06/06/2025 14:17",
+      "Created On" : "06/06/2025 14:14",
+      "Version" : "1.2"
+    }, {
+      "Model File" : "file:/E:/work/smart-testing-genai/model/coil_led_control.slx",
+      "Last Saved" : "06/06/2025 14:17",
+      "Created On" : "06/06/2025 14:13",
+      "Version" : "1.2"
+    }, {
+      "Model File" : "file:/E:/work/smart-testing-genai/model/check_conditions.slx",
+      "Last Saved" : "06/06/2025 15:37",
+      "Created On" : "06/06/2025 14:12",
+      "Version" : "1.3"
+    } ],
+    "Visible" : "Simulink"
+  },
+  "Requirements Sources" : [ {
+    "shc_demo" : {
+      "Project URL" : "http://polarion03.prom.local/polarion/redirect/project/shc_demo",
+      "Baseline Name" : "Head / Current",
+      "Baseline Revision" : "Current"
+    }
+  } ]
+}

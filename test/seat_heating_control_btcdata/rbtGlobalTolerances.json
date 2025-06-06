@@ -1,0 +1,15 @@
+{
+  "Subsystem" : [ {
+    "relPath" : "",
+    "Output" : [ ]
+  }, {
+    "relPath" : "button_to_temp_stage",
+    "Output" : [ ]
+  }, {
+    "relPath" : "check_conditions",
+    "Output" : [ ]
+  }, {
+    "relPath" : "coil_led_control",
+    "Output" : [ ]
+  } ]
+}

@@ -73,8 +73,23 @@ TemperatureStage3.Min = [];
 TemperatureStage3.Max = [];
 TemperatureStage3.DocUnits = '';
 
-RTE_OK = 0;
 
 try
     seat_heating_control_defineIntEnumTypes
 end
+
+SystemActive = Simulink.Signal;
+SystemActive.CoderInfo.StorageClass = 'ExportedGlobal';
+SystemActive.CoderInfo.Identifier = 'SystemActive';
+SystemActive.Description = '';
+SystemActive.DataType = 'boolean';
+SystemActive.Min = [];
+SystemActive.Max = [];
+
+TemperatureStage = Simulink.Signal;
+TemperatureStage.CoderInfo.StorageClass = 'ExportedGlobal';
+TemperatureStage.CoderInfo.Identifier = 'TermperatureStage';
+TemperatureStage.Description = '';
+TemperatureStage.DataType = 'uint8';
+TemperatureStage.Min = [];
+TemperatureStage.Max = [];
