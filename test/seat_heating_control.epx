@@ -2,9 +2,9 @@
   "Profile" : {
     "Version" : "25.2p0",
     "Creator" : "developer",
-    "Creation Date" : "24 Jun 2025, 15:41",
+    "Creation Date" : "24 Jun 2025, 15:57",
     "Modifier" : "developer",
-    "Modification Date" : "24 Jun 2025, 15:42",
+    "Modification Date" : "24 Jun 2025, 15:57",
     "Creation Tool Version" : "25.2p0",
     "OS" : "Windows",
     "Path" : "file:/E:/work/smart-testing-genai/test/seat_heating_control.epx",
@@ -20,11 +20,11 @@
   "Architectures" : {
     "Simulink" : {
       "Creator" : "nabilekhoury",
-      "Import Date" : "24/06/2025 15:41",
+      "Import Date" : "24/06/2025 15:57",
       "Matlab Version" : "Matlab 24.2 (R2024b)",
       "Simulink Version" : "Simulink 24.2 (R2024b)",
       "Model Creation Date" : "15/06/2021 12:12",
-      "Model Version" : "12.16",
+      "Model Version" : "12.17",
       "Model File" : "file:/E:/work/smart-testing-genai/model/seat_heating_control.slx",
       "Init Script" : "",
       "Additional Model Information" : "",

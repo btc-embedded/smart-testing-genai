@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sl:SimulinkArchitecture xmlns:sl="http://btc-es.de/ep/simulink/2014/12/09" modelVersion="12.16" modelPath="E:/work/smart-testing-genai/model/seat_heating_control.slx" modelCreationDate="2021-06-15T12:12:58" creator="nabilekhoury">
+<sl:SimulinkArchitecture xmlns:sl="http://btc-es.de/ep/simulink/2014/12/09" modelVersion="12.17" modelPath="E:/work/smart-testing-genai/model/seat_heating_control.slx" modelCreationDate="2021-06-15T12:12:58" creator="nabilekhoury">
 	<toolInfo name="Matlab" release="(R2024b)" version="24.2" patchLevel="" />
 	<toolInfo name="Simulink" release="(R2024b)" version="24.2" patchLevel="" />
-	<model modelID="module001" modelKind="model" modelVersion="12.16" modelPath="E:/work/smart-testing-genai/model/seat_heating_control.slx" creationDate="2021-06-15T12:12:58" modificationDate="2025-06-24T15:40:48">
+	<model modelID="module001" modelKind="model" modelVersion="12.17" modelPath="E:/work/smart-testing-genai/model/seat_heating_control.slx" creationDate="2021-06-15T12:12:58" modificationDate="2025-06-24T15:53:42">
 		<subsystem subsysID="ss1" physicalPath="seat_heating_control" path="" sampleTime="0.01" name="seat_heating_control" scopeKind="SUT" kind="subsystem">
 			<inport portNumber="1" name="SeatOccupied" physicalPath="seat_heating_control/SeatOccupied" path="SeatOccupied" signalName="SeatOccupied">
 				<boolean />
@@ -31,18 +31,20 @@
 				<uint8 />
 				<usageContext path="shc/coil_led_control/calc_outputs/CPA_TemperatureRanges_TemperatureStage2" physicalPath="seat_heating_control/shc/coil_led_control/calc_outputs/CPA_TemperatureRanges_TemperatureStage2" simulinkBlockType="Constant" blockAttribute="Value" subsystemRef="module003" />
 			</parameter>
-			<outport portNumber="1" name="LEDFeedback" physicalPath="seat_heating_control/LEDFeedback" path="LEDFeedback">
-				<boolean />
+			<outport portNumber="1" name="LEDFeedback" physicalPath="seat_heating_control/LEDFeedback" path="LEDFeedback" signalName="LEDFeedback">
+				<array size="3" startIndex="1">
+					<boolean />
+				</array>
 			</outport>
-			<outport portNumber="2" name="Set_Heating_Coil" physicalPath="seat_heating_control/Set_Heating_Coil" path="Set_Heating_Coil">
-				<double />
+			<outport portNumber="2" name="Set_Heating_Coil" physicalPath="seat_heating_control/Set_Heating_Coil" path="Set_Heating_Coil" signalName="Set_Heating_Coil">
+				<uint8 />
 			</outport>
 			<subsystem refSubsysID="ss2" />
 			<subsystem refSubsysID="ss3" />
 			<subsystem refSubsysID="ss4" />
 		</subsystem>
 		<subsystem subsysID="ss2" physicalPath="seat_heating_control/shc/button_to_temp_stage" path="shc/button_to_temp_stage" sampleTime="0.01" name="button_to_temp_stage" scopeKind="SUT" kind="subsystem" subsystemRef="module002">
-			<inport portNumber="1" name="ButtonPressed" physicalPath="seat_heating_control/shc/button_to_temp_stage/ButtonPressed" path="shc/button_to_temp_stage/ButtonPressed" subsystemRef="module002">
+			<inport portNumber="1" name="ButtonPressed" physicalPath="seat_heating_control/shc/button_to_temp_stage/ButtonPressed" path="shc/button_to_temp_stage/ButtonPressed" subsystemRef="module002" signalName="ButtonPressed">
 				<boolean />
 			</inport>
 			<inport portNumber="2" name="SystemActive" physicalPath="seat_heating_control/shc/button_to_temp_stage/SystemActive" path="shc/button_to_temp_stage/SystemActive" subsystemRef="module002" signalName="SystemActive">
@@ -53,16 +55,16 @@
 			</outport>
 		</subsystem>
 		<subsystem subsysID="ss3" physicalPath="seat_heating_control/shc/check_conditions" path="shc/check_conditions" sampleTime="0.01" name="check_conditions" scopeKind="SUT" kind="subsystem" subsystemRef="module004">
-			<inport portNumber="1" name="SeatOccupied" physicalPath="seat_heating_control/shc/check_conditions/SeatOccupied" path="shc/check_conditions/SeatOccupied" subsystemRef="module004">
+			<inport portNumber="1" name="SeatOccupied" physicalPath="seat_heating_control/shc/check_conditions/SeatOccupied" path="shc/check_conditions/SeatOccupied" subsystemRef="module004" signalName="SeatOccupied">
 				<boolean />
 			</inport>
-			<inport portNumber="2" name="PowerMgtState" physicalPath="seat_heating_control/shc/check_conditions/PowerMgtState" path="shc/check_conditions/PowerMgtState" subsystemRef="module004">
+			<inport portNumber="2" name="PowerMgtState" physicalPath="seat_heating_control/shc/check_conditions/PowerMgtState" path="shc/check_conditions/PowerMgtState" subsystemRef="module004" signalName="PowerMgtState">
 				<enumType name="EnumPowerState">
 					<enumElement name="NOK" value="0" />
 					<enumElement name="OK" value="1" />
 				</enumType>
 			</inport>
-			<inport portNumber="3" name="ErrorStatus" physicalPath="seat_heating_control/shc/check_conditions/ErrorStatus" path="shc/check_conditions/ErrorStatus" subsystemRef="module004">
+			<inport portNumber="3" name="ErrorStatus" physicalPath="seat_heating_control/shc/check_conditions/ErrorStatus" path="shc/check_conditions/ErrorStatus" subsystemRef="module004" signalName="ErrorStatus">
 				<uint8 />
 			</inport>
 			<outport portNumber="1" name="SystemActive" physicalPath="seat_heating_control/shc/check_conditions/SystemActive" path="shc/check_conditions/SystemActive" subsystemRef="module004" signalName="SystemActive">
