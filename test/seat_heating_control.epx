@@ -2,9 +2,9 @@
   "Profile" : {
     "Version" : "25.2p0",
     "Creator" : "developer",
-    "Creation Date" : "23 Jun 2025, 16:26",
+    "Creation Date" : "24 Jun 2025, 11:00",
     "Modifier" : "developer",
-    "Modification Date" : "24 Jun 2025, 10:43",
+    "Modification Date" : "24 Jun 2025, 11:01",
     "Creation Tool Version" : "25.2p0",
     "OS" : "Windows",
     "Path" : "file:/E:/work/smart-testing-genai/test/seat_heating_control.epx",
@@ -20,11 +20,11 @@
   "Architectures" : {
     "Simulink" : {
       "Creator" : "nabilekhoury",
-      "Import Date" : "23/06/2025 16:46",
+      "Import Date" : "24/06/2025 11:01",
       "Matlab Version" : "Matlab 24.2 (R2024b)",
       "Simulink Version" : "Simulink 24.2 (R2024b)",
       "Model Creation Date" : "15/06/2021 12:12",
-      "Model Version" : "12.12",
+      "Model Version" : "12.15",
       "Model File" : "file:/E:/work/smart-testing-genai/model/seat_heating_control.slx",
       "Init Script" : "",
       "Additional Model Information" : "",
@@ -35,9 +35,9 @@
     },
     "Simulink Subsystem References" : [ {
       "Model File" : "file:/E:/work/smart-testing-genai/model/button_to_temp_stage.slx",
-      "Last Saved" : "23/06/2025 16:21",
+      "Last Saved" : "24/06/2025 10:42",
       "Created On" : "06/06/2025 14:14",
-      "Version" : "1.6"
+      "Version" : "1.8"
     }, {
       "Model File" : "file:/E:/work/smart-testing-genai/model/coil_led_control.slx",
       "Last Saved" : "23/06/2025 15:36",
@@ -45,9 +45,9 @@
       "Version" : "1.12"
     }, {
       "Model File" : "file:/E:/work/smart-testing-genai/model/check_conditions.slx",
-      "Last Saved" : "20/06/2025 09:40",
+      "Last Saved" : "24/06/2025 10:58",
       "Created On" : "06/06/2025 14:12",
-      "Version" : "1.4"
+      "Version" : "1.6"
     } ],
     "Visible" : "Simulink"
   }

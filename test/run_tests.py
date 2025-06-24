@@ -45,7 +45,7 @@ b2b_response = ep.post(f"scopes/{toplevel_scope_uid}/b2b", { 'refMode': 'SL MIL'
 util.print_b2b_results(b2b_response, b2b_coverage)
 
 # Create project report
-report = ep.post(f"scopes/{toplevel_scope_uid}/project-report", message="Creating test report")
+report = ep.post(f"scopes/{toplevel_scope_uid}/project-report?template-name=rbt-b2b-ec", message="Creating test report")
 # export project report to a file called 'report.html'
 report_dir = os.path.abspath('reports')
 ep.post(f"reports/{report['uid']}", { 'exportPath': report_dir, 'newName': 'report' })
