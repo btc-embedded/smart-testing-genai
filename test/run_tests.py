@@ -41,7 +41,7 @@ ep.post('coverage-generation', vector_gen_settings, message="Generating vectors"
 b2b_coverage = ep.get(f"scopes/{toplevel_scope_uid}/coverage-results-b2b")
 
 # B2B MIL vs. SIL execution
-b2b_response = ep.post(f"scopes/{toplevel_scope_uid}/b2b", { 'refMode': 'SL MIL', 'compMode': 'SIL' }, message="Running B2B test")
+b2b_response = ep.post(f"scopes/b2b", { 'refMode': 'SL MIL', 'compMode': 'SIL', 'UIDs' : scope_uids }, message="Running B2B test")
 util.print_b2b_results(b2b_response, b2b_coverage)
 
 # Create project report
