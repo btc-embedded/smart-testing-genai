@@ -1,0 +1,358 @@
+{
+  "version":"1.1",
+  "metaData":{
+    "name":"Heating Cycle Test",
+    "scopePath":"",
+    "architecture":"seat_heating_control",
+    "length":"18",
+    "draft":"false",
+    "created":"24 Jun 2025, 14:31",
+    "lastUpdated":"24 Jun 2025, 14:32"
+  },
+  "vectorContent":{
+    "steps":[ {
+      "step":{
+        "number":"0",
+        "comment":"Heating Cycle: Initial state with system active but no heating requested (per requirement 24P)",
+        "inputs":[ {
+          "SeatOccupied":"1"
+        }, {
+          "PowerMgtState":"1"
+        }, {
+          "ErrorStatus":"0"
+        }, {
+          "ButtonPressed":"0"
+        } ],
+        "parameters":[ {
+          "TempStg_High":"200"
+        }, {
+          "TempStg_Low":"100"
+        }, {
+          "TempStg_Med":"150"
+        } ],
+        "outputs":[ {
+          "LEDFeedback(1)":"0"
+        }, {
+          "LEDFeedback(2)":"0"
+        }, {
+          "LEDFeedback(3)":"0"
+        }, {
+          "Set_Heating_Coil":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"1",
+        "comment":"Heating Cycle: System transitions to HIGH temperature stage after first button press",
+        "inputs":[ {
+          "ButtonPressed":"1"
+        } ],
+        "outputs":[ {
+          "LEDFeedback(1)":"1"
+        }, {
+          "LEDFeedback(2)":"1"
+        }, {
+          "LEDFeedback(3)":"1"
+        }, {
+          "Set_Heating_Coil":"200"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"2",
+        "comment":"Heating Cycle: System maintains HIGH temperature stage when button is released",
+        "inputs":[ {
+          "ButtonPressed":"0"
+        } ],
+        "outputs":[ {
+          "LEDFeedback(1)":"1"
+        }, {
+          "LEDFeedback(2)":"1"
+        }, {
+          "LEDFeedback(3)":"1"
+        }, {
+          "Set_Heating_Coil":"200"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"3",
+        "comment":"Heating Cycle: System transitions to MEDIUM temperature stage after second button press",
+        "inputs":[ {
+          "ButtonPressed":"1"
+        } ],
+        "outputs":[ {
+          "LEDFeedback(1)":"1"
+        }, {
+          "LEDFeedback(2)":"1"
+        }, {
+          "LEDFeedback(3)":"0"
+        }, {
+          "Set_Heating_Coil":"150"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"4",
+        "comment":"Heating Cycle: System maintains MEDIUM temperature stage when button is released",
+        "inputs":[ {
+          "ButtonPressed":"0"
+        } ],
+        "outputs":[ {
+          "LEDFeedback(1)":"1"
+        }, {
+          "LEDFeedback(2)":"1"
+        }, {
+          "LEDFeedback(3)":"0"
+        }, {
+          "Set_Heating_Coil":"150"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"5",
+        "comment":"Heating Cycle: System transitions to LOW temperature stage after third button press",
+        "inputs":[ {
+          "ButtonPressed":"1"
+        } ],
+        "outputs":[ {
+          "LEDFeedback(1)":"1"
+        }, {
+          "LEDFeedback(2)":"0"
+        }, {
+          "LEDFeedback(3)":"0"
+        }, {
+          "Set_Heating_Coil":"100"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"6",
+        "comment":"Heating Cycle: System maintains LOW temperature stage when button is released",
+        "inputs":[ {
+          "ButtonPressed":"0"
+        } ],
+        "outputs":[ {
+          "LEDFeedback(1)":"1"
+        }, {
+          "LEDFeedback(2)":"0"
+        }, {
+          "LEDFeedback(3)":"0"
+        }, {
+          "Set_Heating_Coil":"100"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"7",
+        "comment":"Heating Cycle: System transitions to NO HEATING stage after fourth button press",
+        "inputs":[ {
+          "ButtonPressed":"1"
+        } ],
+        "outputs":[ {
+          "LEDFeedback(1)":"0"
+        }, {
+          "LEDFeedback(2)":"0"
+        }, {
+          "LEDFeedback(3)":"0"
+        }, {
+          "Set_Heating_Coil":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"8",
+        "comment":"Heating Cycle: System maintains NO HEATING stage when button is released",
+        "inputs":[ {
+          "ButtonPressed":"0"
+        } ],
+        "outputs":[ {
+          "LEDFeedback(1)":"0"
+        }, {
+          "LEDFeedback(2)":"0"
+        }, {
+          "LEDFeedback(3)":"0"
+        }, {
+          "Set_Heating_Coil":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"9",
+        "comment":"Heating Cycle: System cycles back to HIGH temperature stage, completing the cycle",
+        "inputs":[ {
+          "ButtonPressed":"1"
+        } ],
+        "outputs":[ {
+          "LEDFeedback(1)":"1"
+        }, {
+          "LEDFeedback(2)":"1"
+        }, {
+          "LEDFeedback(3)":"1"
+        }, {
+          "Set_Heating_Coil":"200"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"10",
+        "comment":"Heating Cycle: System maintains HIGH temperature stage when button is released",
+        "inputs":[ {
+          "ButtonPressed":"0"
+        } ],
+        "outputs":[ {
+          "LEDFeedback(1)":"1"
+        }, {
+          "LEDFeedback(2)":"1"
+        }, {
+          "LEDFeedback(3)":"1"
+        }, {
+          "Set_Heating_Coil":"200"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"11",
+        "comment":"Heating Cycle: System should deactivate when seat becomes unoccupied",
+        "inputs":[ {
+          "SeatOccupied":"0"
+        } ],
+        "outputs":[ {
+          "LEDFeedback(1)":"0"
+        }, {
+          "LEDFeedback(2)":"0"
+        }, {
+          "LEDFeedback(3)":"0"
+        }, {
+          "Set_Heating_Coil":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"12",
+        "comment":"Heating Cycle: System should ignore button presses when inactive",
+        "inputs":[ {
+          "ButtonPressed":"1"
+        } ],
+        "outputs":[ {
+          "LEDFeedback(1)":"0"
+        }, {
+          "LEDFeedback(2)":"0"
+        }, {
+          "LEDFeedback(3)":"0"
+        }, {
+          "Set_Heating_Coil":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"13",
+        "comment":"Heating Cycle: System should reactivate and return to the same temperature stage (HIGH) that was active before deactivation",
+        "inputs":[ {
+          "SeatOccupied":"1"
+        }, {
+          "ButtonPressed":"0"
+        } ],
+        "outputs":[ {
+          "LEDFeedback(1)":"1"
+        }, {
+          "LEDFeedback(2)":"1"
+        }, {
+          "LEDFeedback(3)":"1"
+        }, {
+          "Set_Heating_Coil":"200"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"14",
+        "comment":"Heating Cycle: System should deactivate when power status becomes NOK",
+        "inputs":[ {
+          "PowerMgtState":"0"
+        } ],
+        "outputs":[ {
+          "LEDFeedback(1)":"0"
+        }, {
+          "LEDFeedback(2)":"0"
+        }, {
+          "LEDFeedback(3)":"0"
+        }, {
+          "Set_Heating_Coil":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"15",
+        "comment":"Heating Cycle: System should reactivate and return to the same temperature stage (HIGH) that was active before deactivation",
+        "inputs":[ {
+          "PowerMgtState":"1"
+        } ],
+        "outputs":[ {
+          "LEDFeedback(1)":"1"
+        }, {
+          "LEDFeedback(2)":"1"
+        }, {
+          "LEDFeedback(3)":"1"
+        }, {
+          "Set_Heating_Coil":"200"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"16",
+        "comment":"Heating Cycle: System should deactivate when an error is detected",
+        "inputs":[ {
+          "ErrorStatus":"1"
+        } ],
+        "outputs":[ {
+          "LEDFeedback(1)":"0"
+        }, {
+          "LEDFeedback(2)":"0"
+        }, {
+          "LEDFeedback(3)":"0"
+        }, {
+          "Set_Heating_Coil":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"17",
+        "comment":"Heating Cycle: System should reactivate and return to the same temperature stage (HIGH) that was active before deactivation",
+        "inputs":[ {
+          "ErrorStatus":"0"
+        } ],
+        "outputs":[ {
+          "LEDFeedback(1)":"1"
+        }, {
+          "LEDFeedback(2)":"1"
+        }, {
+          "LEDFeedback(3)":"1"
+        }, {
+          "Set_Heating_Coil":"200"
+        } ]
+      }
+    } ]
+  },
+  "toleranceSettings":{
+    "subsystemRelPath":"",
+    "outputs":[ {
+      "signalName":"Set_Heating_Coil","tolAbsValue":"0.0","tolAbsRelValue":"0.0","leadSteps":"0","lagSteps":"0","checked":"true","datatype":"Integer bits=8 signed=false","lsb":"1.0","offset":"0.0"
+    }, {
+      "signalName":"LEDFeedback(2)","tolAbsValue":"0.0","tolAbsRelValue":"0.0","leadSteps":"0","lagSteps":"0","checked":"true","datatype":"Boolean","lsb":"1.0","offset":"0.0"
+    }, {
+      "signalName":"LEDFeedback(3)","tolAbsValue":"0.0","tolAbsRelValue":"0.0","leadSteps":"0","lagSteps":"0","checked":"true","datatype":"Boolean","lsb":"1.0","offset":"0.0"
+    }, {
+      "signalName":"LEDFeedback(1)","tolAbsValue":"0.0","tolAbsRelValue":"0.0","leadSteps":"0","lagSteps":"0","checked":"true","datatype":"Boolean","lsb":"1.0","offset":"0.0"
+    } ]
+  },
+  "requirements":[ "subterra:data-service:objects:/default/seatheater${WorkItem}SEAT-82" ],
+  "interface":{
+    "inputs":[ "SeatOccupied", "PowerMgtState", "ErrorStatus", "ButtonPressed" ],
+    "parameters":[ "TempStg_High", "TempStg_Low", "TempStg_Med" ],
+    "outputs":[ "LEDFeedback(1)", "LEDFeedback(2)", "LEDFeedback(3)", "Set_Heating_Coil" ]
+  },
+  "origin":{
+    "type":"manual",
+    "date":"24 Jun 2025, 14:31:37"
+  }
+}

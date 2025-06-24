@@ -1,0 +1,43 @@
+{
+  "version":"1.0",
+  "configuration":{
+    "signals":{
+      "inputs":[ {
+        "name":"SeatOccupied",
+        "position":"0"
+      }, {
+        "name":"ErrorStatus",
+        "position":"2"
+      }, {
+        "name":"PowerMgtState",
+        "position":"1"
+      }, {
+        "name":"ButtonPressed",
+        "position":"3"
+      } ],
+      "parameters":[ {
+        "name":"TempStg_High",
+        "position":"4"
+      }, {
+        "name":"TempStg_Med",
+        "position":"5"
+      }, {
+        "name":"TempStg_Low",
+        "position":"6"
+      } ],
+      "outputs":[ {
+        "name":"Set_Heating_Coil",
+        "position":"8"
+      }, {
+        "name":"LEDFeedback(2)",
+        "position":"7"
+      }, {
+        "name":"LEDFeedback(3)",
+        "position":"7"
+      }, {
+        "name":"LEDFeedback(1)",
+        "position":"7"
+      } ]
+    }
+  }
+}

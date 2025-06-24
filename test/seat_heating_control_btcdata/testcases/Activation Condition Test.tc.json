@@ -1,0 +1,76 @@
+{
+  "version":"1.1",
+  "metaData":{
+    "name":"Activation Condition Test",
+    "scopePath":"shc/check_conditions",
+    "architecture":"seat_heating_control",
+    "length":"4",
+    "draft":"false",
+    "created":"24 Jun 2025, 14:34",
+    "lastUpdated":"24 Jun 2025, 14:34"
+  },
+  "vectorContent":{
+    "steps":[ {
+      "step":{
+        "number":"0",
+        "comment":"all good",
+        "inputs":[ {
+          "SeatOccupied":"1"
+        }, {
+          "PowerMgtState":"1"
+        }, {
+          "ErrorStatus":"0"
+        } ],
+        "outputs":[ {
+          "SystemActive":"1"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"1",
+        "comment":"good / good / bad",
+        "inputs":[ {
+          "ErrorStatus":"1"
+        } ],
+        "outputs":[ {
+          "SystemActive":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"2",
+        "comment":"good / bad / good",
+        "inputs":[ {
+          "PowerMgtState":"0"
+        }, {
+          "ErrorStatus":"0"
+        } ],
+        "outputs":[ {
+          "SystemActive":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"3",
+        "comment":"bad / good / good",
+        "inputs":[ {
+          "SeatOccupied":"0"
+        }, {
+          "PowerMgtState":"1"
+        } ],
+        "outputs":[ {
+          "SystemActive":"0"
+        } ]
+      }
+    } ]
+  },
+  "requirements":[ "subterra:data-service:objects:/default/seatheater${WorkItem}SEAT-79" ],
+  "interface":{
+    "inputs":[ "SeatOccupied", "PowerMgtState", "ErrorStatus" ],
+    "outputs":[ "SystemActive" ]
+  },
+  "origin":{
+    "type":"manual",
+    "date":"24 Jun 2025, 14:31:37"
+  }
+}
