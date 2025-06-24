@@ -1,0 +1,125 @@
+{
+  "metaData":{
+    "kind":"Polarion",
+    "name":"seatheater",
+    "externalUUID":"UUID http://polarion03.prom.local/polarion/redirect/project/seatheater",
+    "lastImportDate":"23 Jun 2025, 16:27",
+    "additionalAttributes":[ ]
+  },
+  "requirements":[ {
+    "scopePath":"",
+    "data":[ {
+      "identifier":"SEAT-79",
+      "name":"Activation Conditions",
+      "description":"The system shall only be active while the following conditions are met: \n- the seat is occupied\n- the power status reads OK\n- there is no error (error flag: 0)",
+      "externalUUID":"subterra:data-service:objects:/default/seatheater${WorkItem}SEAT-79",
+      "url":"http://polarion03.prom.local/polarion/redirect/project/seatheater/workitem?id=SEAT-79",
+      "parent":"",
+      "lastUpdated":"23 Jun 2025, 16:27",
+      "deleted":"false",
+      "additionalAttributes":[ ]
+    }, {
+      "identifier":"SEAT-80",
+      "name":"Reactivation",
+      "description":"When the system is reactivated (activation conditions are once again met) it shall return to the same temperature stage that was active before.",
+      "externalUUID":"subterra:data-service:objects:/default/seatheater${WorkItem}SEAT-80",
+      "url":"http://polarion03.prom.local/polarion/redirect/project/seatheater/workitem?id=SEAT-80",
+      "parent":"",
+      "lastUpdated":"23 Jun 2025, 16:27",
+      "deleted":"false",
+      "additionalAttributes":[ ]
+    }, {
+      "identifier":"SEAT-81",
+      "name":"Initial Request",
+      "description":"When the system is active but the button has not been pressed it shall initially be in the NO HEATING temperature stage",
+      "externalUUID":"subterra:data-service:objects:/default/seatheater${WorkItem}SEAT-81",
+      "url":"http://polarion03.prom.local/polarion/redirect/project/seatheater/workitem?id=SEAT-81",
+      "parent":"",
+      "lastUpdated":"23 Jun 2025, 16:27",
+      "deleted":"false",
+      "additionalAttributes":[ ]
+    }, {
+      "identifier":"SEAT-82",
+      "name":"Heating Cycle",
+      "description":"When active, the system shall cycle through the temperature stages and move from one stage to the next on each button press:\r\n- high temperature\r\n- medium temperature\r\n- low temperature\r\n- no heating",
+      "externalUUID":"subterra:data-service:objects:/default/seatheater${WorkItem}SEAT-82",
+      "url":"http://polarion03.prom.local/polarion/redirect/project/seatheater/workitem?id=SEAT-82",
+      "parent":"",
+      "lastUpdated":"23 Jun 2025, 16:27",
+      "deleted":"false",
+      "additionalAttributes":[ ]
+    }, {
+      "identifier":"SEAT-83",
+      "name":"No Heating",
+      "description":"When the system is active and is in the NO HEATING temperature stage:\n- it shall request no temperature\n- all LEDs shall be disabled",
+      "externalUUID":"subterra:data-service:objects:/default/seatheater${WorkItem}SEAT-83",
+      "url":"http://polarion03.prom.local/polarion/redirect/project/seatheater/workitem?id=SEAT-83",
+      "parent":"",
+      "lastUpdated":"23 Jun 2025, 16:27",
+      "deleted":"false",
+      "additionalAttributes":[ ]
+    }, {
+      "identifier":"SEAT-84",
+      "name":"Low Heating",
+      "description":"When the system is active and is in the LOW temperature stage:\n- it shall request the low temperature level based on the parameter \"TempStg_Low\"\n- only the first LED shall be enabled",
+      "externalUUID":"subterra:data-service:objects:/default/seatheater${WorkItem}SEAT-84",
+      "url":"http://polarion03.prom.local/polarion/redirect/project/seatheater/workitem?id=SEAT-84",
+      "parent":"",
+      "lastUpdated":"23 Jun 2025, 16:27",
+      "deleted":"false",
+      "additionalAttributes":[ ]
+    }, {
+      "identifier":"SEAT-85",
+      "name":"Medium Heating",
+      "description":"When the system is active and is in the MEDIUM temperature stage:\n- it shall request the medium temperature level based on the parameter \"TempStg_Med\"\n- only the first two LEDs shall be enabled",
+      "externalUUID":"subterra:data-service:objects:/default/seatheater${WorkItem}SEAT-85",
+      "url":"http://polarion03.prom.local/polarion/redirect/project/seatheater/workitem?id=SEAT-85",
+      "parent":"",
+      "lastUpdated":"23 Jun 2025, 16:27",
+      "deleted":"false",
+      "additionalAttributes":[ ]
+    }, {
+      "identifier":"SEAT-86",
+      "name":"High Heating",
+      "description":"When the system is active and is in the HIGH temperature stage:\r\n- it shall request the high temperature level based on the parameter \"TempStg_High\"\r\n- all three LEDs shall be enabled",
+      "externalUUID":"subterra:data-service:objects:/default/seatheater${WorkItem}SEAT-86",
+      "url":"http://polarion03.prom.local/polarion/redirect/project/seatheater/workitem?id=SEAT-86",
+      "parent":"",
+      "lastUpdated":"23 Jun 2025, 16:27",
+      "deleted":"false",
+      "additionalAttributes":[ ]
+    } ]
+  } ],
+  "settings":[ {
+    "key":"Host",
+    "value":"http://polarion03.prom.local"
+  }, {
+    "key":"Port",
+    "value":"80"
+  } ],
+  "importOptions":[ {
+    "key":"name_attr_value",
+    "value":"Title"
+  }, {
+    "key":"desc_attr_value",
+    "value":"Description"
+  }, {
+    "key":"Host",
+    "value":"http://polarion03.prom.local"
+  }, {
+    "key":"Port",
+    "value":"80"
+  }, {
+    "key":"Project URL",
+    "value":"http://polarion03.prom.local/polarion/redirect/project/seatheater"
+  }, {
+    "key":"Work Item Types",
+    "value":"Requirement"
+  }, {
+    "key":"Baseline Name",
+    "value":"Head / Current"
+  }, {
+    "key":"Baseline Revision",
+    "value":"Current"
+  } ]
+}

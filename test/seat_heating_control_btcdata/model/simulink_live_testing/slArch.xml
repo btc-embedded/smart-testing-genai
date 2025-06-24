@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sl:SimulinkArchitecture xmlns:sl="http://btc-es.de/ep/simulink/2014/12/09" modelVersion="12.12" modelPath="E:/work/smart-testing-genai/model/seat_heating_control.slx" modelCreationDate="2021-06-15T12:12:58" creator="nabilekhoury">
+	<toolInfo name="Matlab" release="(R2024b)" version="24.2" patchLevel="" />
+	<toolInfo name="Simulink" release="(R2024b)" version="24.2" patchLevel="" />
+	<model modelID="module001" modelKind="model" modelVersion="12.12" modelPath="E:/work/smart-testing-genai/model/seat_heating_control.slx" creationDate="2021-06-15T12:12:58" modificationDate="2025-06-23T16:21:43">
+		<subsystem subsysID="ss1" physicalPath="seat_heating_control" path="" sampleTime="0.01" name="seat_heating_control" scopeKind="SUT" kind="subsystem">
+			<inport portNumber="1" name="SeatOccupied" physicalPath="seat_heating_control/SeatOccupied" path="SeatOccupied" signalName="SeatOccupied">
+				<boolean />
+			</inport>
+			<inport portNumber="2" name="PowerMgtState" physicalPath="seat_heating_control/PowerMgtState" path="PowerMgtState" signalName="PowerMgtState">
+				<enumType name="EnumPowerState">
+					<enumElement name="NOK" value="0" />
+					<enumElement name="OK" value="1" />
+				</enumType>
+			</inport>
+			<inport portNumber="3" name="ErrorStatus" physicalPath="seat_heating_control/ErrorStatus" path="ErrorStatus" signalName="ErrorStatus">
+				<uint8 />
+			</inport>
+			<inport portNumber="4" name="ButtonPressed" physicalPath="seat_heating_control/ButtonPressed" path="ButtonPressed" signalName="ButtonPressed">
+				<boolean />
+			</inport>
+			<parameter name="TempStg_High" path="shc/coil_led_control/calc_outputs/CPA_TemperatureRanges_TemperatureStage3" physicalPath="seat_heating_control/shc/coil_led_control/calc_outputs/CPA_TemperatureRanges_TemperatureStage3" subsystemRef="module003" origin="explicit_param" workspace="TempStg_High" initValue="45.0">
+				<uint8 />
+				<usageContext path="shc/coil_led_control/calc_outputs/CPA_TemperatureRanges_TemperatureStage3" physicalPath="seat_heating_control/shc/coil_led_control/calc_outputs/CPA_TemperatureRanges_TemperatureStage3" simulinkBlockType="Constant" blockAttribute="Value" subsystemRef="module003" />
+			</parameter>
+			<parameter name="TempStg_Low" path="shc/coil_led_control/calc_outputs/CPA_TemperatureRanges_TemperatureRanges" physicalPath="seat_heating_control/shc/coil_led_control/calc_outputs/CPA_TemperatureRanges_TemperatureRanges" subsystemRef="module003" origin="explicit_param" workspace="TempStg_Low" initValue="30.0">
+				<uint8 />
+				<usageContext path="shc/coil_led_control/calc_outputs/CPA_TemperatureRanges_TemperatureRanges" physicalPath="seat_heating_control/shc/coil_led_control/calc_outputs/CPA_TemperatureRanges_TemperatureRanges" simulinkBlockType="Constant" blockAttribute="Value" subsystemRef="module003" />
+			</parameter>
+			<parameter name="TempStg_Med" path="shc/coil_led_control/calc_outputs/CPA_TemperatureRanges_TemperatureStage2" physicalPath="seat_heating_control/shc/coil_led_control/calc_outputs/CPA_TemperatureRanges_TemperatureStage2" subsystemRef="module003" origin="explicit_param" workspace="TempStg_Med" initValue="35.0">
+				<uint8 />
+				<usageContext path="shc/coil_led_control/calc_outputs/CPA_TemperatureRanges_TemperatureStage2" physicalPath="seat_heating_control/shc/coil_led_control/calc_outputs/CPA_TemperatureRanges_TemperatureStage2" simulinkBlockType="Constant" blockAttribute="Value" subsystemRef="module003" />
+			</parameter>
+			<outport portNumber="1" name="LEDFeedback" physicalPath="seat_heating_control/LEDFeedback" path="LEDFeedback" signalName="LEDFeedback">
+				<array size="3" startIndex="1">
+					<boolean />
+				</array>
+			</outport>
+			<outport portNumber="2" name="Set_Heating_Coil" physicalPath="seat_heating_control/Set_Heating_Coil" path="Set_Heating_Coil" signalName="Set_Heating_Coil">
+				<uint8 />
+			</outport>
+			<subsystem refSubsysID="ss2" />
+			<subsystem refSubsysID="ss3" />
+			<subsystem refSubsysID="ss4" />
+		</subsystem>
+		<subsystem subsysID="ss2" physicalPath="seat_heating_control/shc/button_to_temp_stage" path="shc/button_to_temp_stage" sampleTime="0.01" name="button_to_temp_stage" scopeKind="SUT" kind="subsystem" subsystemRef="module002">
+			<inport portNumber="1" name="ButtonPressed" physicalPath="seat_heating_control/shc/button_to_temp_stage/ButtonPressed" path="shc/button_to_temp_stage/ButtonPressed" subsystemRef="module002" signalName="ButtonPressed">
+				<boolean />
+			</inport>
+			<outport portNumber="1" name="TemperatureStage" physicalPath="seat_heating_control/shc/button_to_temp_stage/TemperatureStage" path="shc/button_to_temp_stage/TemperatureStage" subsystemRef="module002">
+				<uint8 />
+			</outport>
+		</subsystem>
+		<subsystem subsysID="ss3" physicalPath="seat_heating_control/shc/check_conditions" path="shc/check_conditions" sampleTime="0.01" name="check_conditions" scopeKind="SUT" kind="subsystem" subsystemRef="module004">
+			<inport portNumber="1" name="SeatOccupied" physicalPath="seat_heating_control/shc/check_conditions/SeatOccupied" path="shc/check_conditions/SeatOccupied" subsystemRef="module004" signalName="SeatOccupied">
+				<boolean />
+			</inport>
+			<inport portNumber="2" name="PowerMgtState" physicalPath="seat_heating_control/shc/check_conditions/PowerMgtState" path="shc/check_conditions/PowerMgtState" subsystemRef="module004" signalName="PowerMgtState">
+				<enumType name="EnumPowerState">
+					<enumElement name="NOK" value="0" />
+					<enumElement name="OK" value="1" />
+				</enumType>
+			</inport>
+			<inport portNumber="3" name="ErrorStatus" physicalPath="seat_heating_control/shc/check_conditions/ErrorStatus" path="shc/check_conditions/ErrorStatus" subsystemRef="module004" signalName="ErrorStatus">
+				<uint8 />
+			</inport>
+			<outport portNumber="1" name="ActivationCondition" physicalPath="seat_heating_control/shc/check_conditions/ActivationCondition" path="shc/check_conditions/ActivationCondition" subsystemRef="module004">
+				<boolean />
+			</outport>
+		</subsystem>
+		<subsystem subsysID="ss4" physicalPath="seat_heating_control/shc/coil_led_control" path="shc/coil_led_control" sampleTime="0.01" name="coil_led_control" scopeKind="SUT" kind="subsystem" subsystemRef="module003">
+			<inport portNumber="1" name="ActivationCondition" physicalPath="seat_heating_control/shc/coil_led_control/ActivationCondition" path="shc/coil_led_control/ActivationCondition" subsystemRef="module003">
+				<boolean />
+			</inport>
+			<inport portNumber="2" name="TemperatureStage" physicalPath="seat_heating_control/shc/coil_led_control/TemperatureStage" path="shc/coil_led_control/TemperatureStage" subsystemRef="module003" signalName="TemperatureStage">
+				<uint8 />
+			</inport>
+			<parameter name="TempStg_High" path="shc/coil_led_control/calc_outputs/CPA_TemperatureRanges_TemperatureStage3" physicalPath="seat_heating_control/shc/coil_led_control/calc_outputs/CPA_TemperatureRanges_TemperatureStage3" subsystemRef="module003" origin="explicit_param" workspace="TempStg_High" initValue="45.0">
+				<uint8 />
+				<usageContext path="shc/coil_led_control/calc_outputs/CPA_TemperatureRanges_TemperatureStage3" physicalPath="seat_heating_control/shc/coil_led_control/calc_outputs/CPA_TemperatureRanges_TemperatureStage3" simulinkBlockType="Constant" blockAttribute="Value" subsystemRef="module003" />
+			</parameter>
+			<parameter name="TempStg_Low" path="shc/coil_led_control/calc_outputs/CPA_TemperatureRanges_TemperatureRanges" physicalPath="seat_heating_control/shc/coil_led_control/calc_outputs/CPA_TemperatureRanges_TemperatureRanges" subsystemRef="module003" origin="explicit_param" workspace="TempStg_Low" initValue="30.0">
+				<uint8 />
+				<usageContext path="shc/coil_led_control/calc_outputs/CPA_TemperatureRanges_TemperatureRanges" physicalPath="seat_heating_control/shc/coil_led_control/calc_outputs/CPA_TemperatureRanges_TemperatureRanges" simulinkBlockType="Constant" blockAttribute="Value" subsystemRef="module003" />
+			</parameter>
+			<parameter name="TempStg_Med" path="shc/coil_led_control/calc_outputs/CPA_TemperatureRanges_TemperatureStage2" physicalPath="seat_heating_control/shc/coil_led_control/calc_outputs/CPA_TemperatureRanges_TemperatureStage2" subsystemRef="module003" origin="explicit_param" workspace="TempStg_Med" initValue="35.0">
+				<uint8 />
+				<usageContext path="shc/coil_led_control/calc_outputs/CPA_TemperatureRanges_TemperatureStage2" physicalPath="seat_heating_control/shc/coil_led_control/calc_outputs/CPA_TemperatureRanges_TemperatureStage2" simulinkBlockType="Constant" blockAttribute="Value" subsystemRef="module003" />
+			</parameter>
+			<outport portNumber="1" name="LEDFeedback" physicalPath="seat_heating_control/shc/coil_led_control/LEDFeedback" path="shc/coil_led_control/LEDFeedback" subsystemRef="module003" signalName="LEDFeedback">
+				<array size="3" startIndex="1">
+					<boolean />
+				</array>
+			</outport>
+			<outport portNumber="2" name="Set_Heating_Coil" physicalPath="seat_heating_control/shc/coil_led_control/Set_Heating_Coil" path="shc/coil_led_control/Set_Heating_Coil" subsystemRef="module003" signalName="Set_Heating_Coil">
+				<uint8 />
+			</outport>
+		</subsystem>
+		<rootSystem refSubsysID="ss1" />
+	</model>
+	<model modelID="module002" modelKind="subsystem_ref" modelVersion="1.6" modelPath="E:\work\smart-testing-genai\model\button_to_temp_stage.slx" creationDate="2025-06-06T14:14:03" modificationDate="2025-06-23T16:21:43" />
+	<model modelID="module003" modelKind="subsystem_ref" modelVersion="1.12" modelPath="E:\work\smart-testing-genai\model\coil_led_control.slx" creationDate="2025-06-06T14:13:27" modificationDate="2025-06-23T15:36:32" />
+	<model modelID="module004" modelKind="subsystem_ref" modelVersion="1.4" modelPath="E:\work\smart-testing-genai\model\check_conditions.slx" creationDate="2025-06-06T14:12:39" modificationDate="2025-06-20T09:40:03" />
+	<root refModelID="module001" />
+</sl:SimulinkArchitecture>

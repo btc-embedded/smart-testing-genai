@@ -42,11 +42,10 @@ def collect_architecture_metadata(meta_data) -> dict:
     if meta_data and 'BTC EmbeddedPlatform' in meta_data:
         meta_data = meta_data['BTC EmbeddedPlatform']
         model_path = meta_data['Simulink']['Model File']
-
         arch_metadata['Last change (Model)'] = get_last_change(model_path)
-        tldd_path = model_path[:-4] + '.dd'
-        if os.path.isfile(tldd_path):
-            arch_metadata['Last change (DD)'] = get_last_change(tldd_path)
+        dd_path = model_path[:-4] + '.dd'
+        if os.path.isfile(dd_path):
+            arch_metadata['Last change (DD)'] = get_last_change(dd_path)
 
     return arch_metadata
 
@@ -55,8 +54,8 @@ def collect_testing_metadata(meta_data) -> dict:
     tst_metadata = {}
     if meta_data and 'BTC EmbeddedPlatform' in meta_data:
         meta_data = meta_data['BTC EmbeddedPlatform']
-        epx_file = meta_data['Profile Path']
-        tst_metadata['Last change (Test Project)'] = get_last_change(epx_file)
+        profile = meta_data['Profile Path']
+        tst_metadata['Last change (Test Project)'] = get_last_change(profile)
     return tst_metadata
 
 

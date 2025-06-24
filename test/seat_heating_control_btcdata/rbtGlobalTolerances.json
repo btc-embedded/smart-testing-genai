@@ -3,13 +3,13 @@
     "relPath" : "",
     "Output" : [ ]
   }, {
-    "relPath" : "button_to_temp_stage",
+    "relPath" : "shc/button_to_temp_stage",
     "Output" : [ ]
   }, {
-    "relPath" : "check_conditions",
+    "relPath" : "shc/check_conditions",
     "Output" : [ ]
   }, {
-    "relPath" : "coil_led_control",
+    "relPath" : "shc/coil_led_control",
     "Output" : [ ]
   } ]
 }

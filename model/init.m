@@ -12,12 +12,12 @@ PowerMgtState.DataType = 'Enum: EnumPowerState';
 PowerMgtState.Min = [];
 PowerMgtState.Max = [];
 
-PowerMgtState_ErrorStatus = Simulink.Signal;
-PowerMgtState_ErrorStatus.CoderInfo.StorageClass = 'ExportedGlobal';
-PowerMgtState_ErrorStatus.Description = '';
-PowerMgtState_ErrorStatus.DataType = 'uint8';
-PowerMgtState_ErrorStatus.Min = [];
-PowerMgtState_ErrorStatus.Max = [];
+ErrorStatus = Simulink.Signal;
+ErrorStatus.CoderInfo.StorageClass = 'ExportedGlobal';
+ErrorStatus.Description = '';
+ErrorStatus.DataType = 'uint8';
+ErrorStatus.Min = [];
+ErrorStatus.Max = [];
 
 ButtonPressed = Simulink.Signal;
 ButtonPressed.CoderInfo.StorageClass = 'ExportedGlobal';
@@ -43,35 +43,35 @@ Set_Heating_Coil.Description = '';
 Set_Heating_Coil.DataType = 'uint8';
 Set_Heating_Coil.Min = [];
 Set_Heating_Coil.Max = [];
+Set_Heating_Coil.Unit = '°C';
 
 
+TempStg_Low = Simulink.Parameter;
+TempStg_Low.Value = 30;
+TempStg_Low.CoderInfo.StorageClass = 'ExportedGlobal';
+TempStg_Low.Description = '';
+TempStg_Low.DataType = 'uint8';
+TempStg_Low.Min = [];
+TempStg_Low.Max = [];
+TempStg_Low.Unit = '°C';
 
-TemperatureStage1 = Simulink.Parameter;
-TemperatureStage1.Value = 30;
-TemperatureStage1.CoderInfo.StorageClass = 'ExportedGlobal';
-TemperatureStage1.Description = '';
-TemperatureStage1.DataType = 'uint8';
-TemperatureStage1.Min = [];
-TemperatureStage1.Max = [];
-TemperatureStage1.DocUnits = '';
+TempStg_Med = Simulink.Parameter;
+TempStg_Med.Value = 35;
+TempStg_Med.CoderInfo.StorageClass = 'ExportedGlobal';
+TempStg_Med.Description = '';
+TempStg_Med.DataType = 'uint8';
+TempStg_Med.Min = [];
+TempStg_Med.Max = [];
+TempStg_Med.Unit = '°C';
 
-TemperatureStage2 = Simulink.Parameter;
-TemperatureStage2.Value = 35;
-TemperatureStage2.CoderInfo.StorageClass = 'ExportedGlobal';
-TemperatureStage2.Description = '';
-TemperatureStage2.DataType = 'uint8';
-TemperatureStage2.Min = [];
-TemperatureStage2.Max = [];
-TemperatureStage2.DocUnits = '';
-
-TemperatureStage3 = Simulink.Parameter;
-TemperatureStage3.Value = 45;
-TemperatureStage3.CoderInfo.StorageClass = 'ExportedGlobal';
-TemperatureStage3.Description = '';
-TemperatureStage3.DataType = 'uint8';
-TemperatureStage3.Min = [];
-TemperatureStage3.Max = [];
-TemperatureStage3.DocUnits = '';
+TempStg_High = Simulink.Parameter;
+TempStg_High.Value = 45;
+TempStg_High.CoderInfo.StorageClass = 'ExportedGlobal';
+TempStg_High.Description = '';
+TempStg_High.DataType = 'uint8';
+TempStg_High.Min = [];
+TempStg_High.Max = [];
+TempStg_High.Unit = '°C';
 
 
 try

@@ -2,12 +2,13 @@
   "Profile" : {
     "Version" : "25.2p0",
     "Creator" : "developer",
-    "Creation Date" : "6 Jun 2025, 15:47",
+    "Creation Date" : "23 Jun 2025, 16:26",
     "Modifier" : "developer",
-    "Modification Date" : "6 Jun 2025, 15:53",
+    "Modification Date" : "24 Jun 2025, 09:18",
     "Creation Tool Version" : "25.2p0",
     "OS" : "Windows",
-    "Path" : "file:/E:/work/smart-testing-genai/test/seat_heating_control.epx"
+    "Path" : "file:/E:/work/smart-testing-genai/test/seat_heating_control.epx",
+    "PreRelease" : true
   },
   "Compiler" : {
     "Name" : "mingw64",
@@ -19,40 +20,40 @@
   "Architectures" : {
     "Simulink" : {
       "Creator" : "nabilekhoury",
-      "Import Date" : "06/06/2025 15:47",
+      "Import Date" : "23/06/2025 16:46",
       "Matlab Version" : "Matlab 24.2 (R2024b)",
       "Simulink Version" : "Simulink 24.2 (R2024b)",
       "Model Creation Date" : "15/06/2021 12:12",
-      "Model Version" : "12.6",
+      "Model Version" : "12.12",
       "Model File" : "file:/E:/work/smart-testing-genai/model/seat_heating_control.slx",
       "Init Script" : "",
       "Additional Model Information" : "",
-      "Architecture" : "Simulink Top Level",
+      "Architecture" : "Simulink (Live Testing)",
       "Parameters" : "ON",
       "Visibility" : "BLACK_BOX",
       "Conversion Target" : "EC"
     },
     "Simulink Subsystem References" : [ {
       "Model File" : "file:/E:/work/smart-testing-genai/model/button_to_temp_stage.slx",
-      "Last Saved" : "06/06/2025 14:17",
+      "Last Saved" : "23/06/2025 16:21",
       "Created On" : "06/06/2025 14:14",
-      "Version" : "1.2"
+      "Version" : "1.6"
     }, {
       "Model File" : "file:/E:/work/smart-testing-genai/model/coil_led_control.slx",
-      "Last Saved" : "06/06/2025 14:17",
+      "Last Saved" : "23/06/2025 15:36",
       "Created On" : "06/06/2025 14:13",
-      "Version" : "1.2"
+      "Version" : "1.12"
     }, {
       "Model File" : "file:/E:/work/smart-testing-genai/model/check_conditions.slx",
-      "Last Saved" : "06/06/2025 15:37",
+      "Last Saved" : "20/06/2025 09:40",
       "Created On" : "06/06/2025 14:12",
-      "Version" : "1.3"
+      "Version" : "1.4"
     } ],
     "Visible" : "Simulink"
   },
   "Requirements Sources" : [ {
-    "shc_demo" : {
-      "Project URL" : "http://polarion03.prom.local/polarion/redirect/project/shc_demo",
+    "seatheater" : {
+      "Project URL" : "http://polarion03.prom.local/polarion/redirect/project/seatheater",
       "Baseline Name" : "Head / Current",
       "Baseline Revision" : "Current"
     }

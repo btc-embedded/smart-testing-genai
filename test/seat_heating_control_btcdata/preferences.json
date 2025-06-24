@@ -12,6 +12,7 @@
   "ep.simulation.sil.bl.prefs.silFlushToZeroInternal" : false,
   "ep.da.tolerance.fxp" : "0",
   "ep.simulation.ml.bl.prefs.milRndMeth" : "",
+  "ep.testcomposer.base.ui.preferences.TCShowParameterValuesPreferenceKey" : true,
   "ep.requirement.doors.root.location" : "",
   "ep.da.tolerance.fxp.resolution" : false,
   "ep.simulation.ml.bl.prefs.pilExecutionConfiguration" : "",

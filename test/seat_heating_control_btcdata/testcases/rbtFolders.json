@@ -1,3 +1,6 @@
 {
-  "Default Test Cases" : { }
+  "Default Test Cases" : {
+    "check_conditions" : [ "Activation Conditions Test" ],
+    "seat_heating_control" : [ "Heating Cycle Test" ]
+  }
 }
