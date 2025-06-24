@@ -853,17 +853,8 @@ function toggleSection(div_id, clickable_id ) {
             <!-- Section navigation -->
             <div id="sectionNavigation_general">
                 <ul class="sectionList">
-                            <li onclick="expandSectionOnNavigation('general_interface_div','general_interface_section'); scrollToTargetAdjusted('general_interface_section')">
-                                <a>Interface</a>
-                            </li>
-                            <li onclick="expandSectionOnNavigation('general_interfaceCoverage_div','general_interfaceCoverage_section'); scrollToTargetAdjusted('general_interfaceCoverage_section')">
-                                <a>Interface Coverage</a>
-                            </li>
                             <li onclick="expandSectionOnNavigation('general_metaInformation_div','general_metaInformation_section'); scrollToTargetAdjusted('general_metaInformation_section')">
                                 <a>Meta Information</a>
-                            </li>
-                            <li onclick="expandSectionOnNavigation('general_messages_div','general_messages_section'); scrollToTargetAdjusted('general_messages_section')">
-                                <a>Messages</a>
                             </li>
                 </ul>
             </div>
@@ -893,7 +884,7 @@ function toggleSection(div_id, clickable_id ) {
         </div>
         <ul class="metainfo">
             <li><span>Creator:</span> developer</li>        
-            <li><span>Creation date:</span> 2025-06-24 09:28:50</li>     
+            <li><span>Creation date:</span> 2025-06-24 14:40:35</li>     
         </ul>
     </div>
 
@@ -909,8 +900,8 @@ function toggleSection(div_id, clickable_id ) {
                             <div class="topicOverviewSectionHeader">Test Execution</div>
                             <div class="topicOverviewSectionContent">
     <div class="statusContainer">
-        <div class="statusIcon warning-glyph"></div>
-    <a class="warning-color" onclick="combinedShowTopicAndScroll('rbt','rbt_testExecution_section');">There are no verdicts</a>
+        <div class="statusIcon ok-glyph"></div>
+    <a class="ok-color" onclick="combinedShowTopicAndScroll('rbt','rbt_testExecution_section');">All tests are passed</a>
     </div>
                         </div>
                     </div>
@@ -932,7 +923,7 @@ function toggleSection(div_id, clickable_id ) {
 
     <div class="statusContainer">
         <h5>Coverage (Handled)</h5>
-        <div class="coverageValue unknown-color">90.3%</div>
+        <div class="coverageValue unknown-color">98.2%</div>
         <div class="coverageLabel">MC/DC</div>
     <a class="unknown-color" onclick="combinedShowTopicAndScroll('rbt','rbt_codeAnalysis_section');">There are unhandled goals</a>
     </div>
@@ -988,241 +979,8 @@ function toggleSection(div_id, clickable_id ) {
         <!-- Page Sections -->
         <h2 style="padding-left:20px;">General Information</h2>
         <div class="sectionPageDiv">
-            <h3 id="general_interface_section" onclick="toggleSection('general_interface_div','general_interface_section')" class="extended anchored">
-                1. Interface
-            </h3>
-            <div id="general_interface_div">
-        <a style="padding-left:16px;">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAIGNIUk0AAHomAACAhAAA+gAAAIDo
-        AAB1MAAA6mAAADqYAAAXcJy6UTwAAAAEZ0FNQQAAsY58+1GTAAAAAXNSR0IArs4c6QAAAAZiS0dE
-        AP8A/wD/oL2nkwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAZlJREFUeNpjYCAVuPVXMjD8Z4RxWfCp
-        5fadtpmFmUkGWezzj59abD7TVH5sYUgmaMDXH798unO8MMSnrTsR/sJn2vfvW7JyWAi5WF9FEkOs
-        N9ebO3/C5oRXPtO+wQ0IbQhl+yTClsXGxJb2+89vpR15SziICRKwAa6TI6S+MbEfkBERl7LUN+MW
-        FxFnABoAVnDxznNsXvj65sO3BT+3ZJWxgGz+DtRsqmOsaKFvhuIlbg62LS3z92EGIgvLyh9bsnPA
-        LvgoxJohJyohha4ZHIibs3yxReOPLVkdDAzZYC6j77TEa/5O3pqyEjJ4/fr4xROGFI0QRnRxpl9/
-        fytJCIsTDCyQGvfJMT8wDGCgEDCxMbPee/H2JUGFIDUgtRgG/Pzzc8aJS6e/EjIApAakFsMA/ne/
-        Z7x4/eLZiYun/uDUDJQDqQGpRZdjvnbg2l95T821L16/Cnj4/DEHHw8vGycHJ8Pff/8Ynr16zrDz
-        6J6vNx/cfvzr30+HzeWrPqAbwIgrKYPEWFlY7/3692sW35tf01Y3rP6FzXUAe/evPGi+Te4AAAAA
-        SUVORK5CYII="/>
-            Inputs: 4
-        </a>
-        <a style="padding-left:16px;">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAIGNIUk0AAHomAACAhAAA+gAAAIDo
-        AAB1MAAA6mAAADqYAAAXcJy6UTwAAAAEZ0FNQQAAsY58+1GTAAAAAXNSR0IArs4c6QAAAAZiS0dE
-        AP8A/wD/oL2nkwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAZhJREFUeNpjYCAK/GdkcOuvxCbDSIx2
-        Dp+pc3/9+RPDy8F+DVn8z99/TwgawOkzbYqEME9CVpAFN7pc6ZRtDCz4NLP7TOsSEeBK6M315ubh
-        ZMOqBm5AaEMo2ycRtiw2Jra0339+K+3IW8JBjPeYQYTr5Aipfzycp6REJf1dLB2lHM3tWZZ3zW/8
-        e2vr7t9yblLHLj/UlhMXYHv57gsDMt596jYDI8jm76JcV0x1jBUt9M1QvOQuYMFIMBDdJkXlyUnI
-        toW6BXJjcyLEEFA0Tqhg2FXYji7PxM7CnmGhZ8qNy487P5z4D4zt/9g0g9OB++SYH7kR6eysrKx4
-        A+v3798Mk1fM/LkzFzVwmRgoBExszKz3Xrx9SVAhSA1ILYYBP//8nHHi0umvhAwAqQGpxTCA/93v
-        GS9ev3h24uKpPzg1A+VAakBqMRLStQPX/sp7aq598fpVwMPnjzn4eHjZODk4Gf7++8fw7NVzhp1H
-        93y9+eD241//fjpsLl/1AWduRE/KIDFWFtZ7v/79msX35te01Q2rf2FzHQCewLc8FCgiSwAAAABJ
-        RU5ErkJggg=="/>
-            Outputs: 2
-        </a>
-        <a style="padding-left:16px;">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAIGNIUk0AAHomAACAhAAA+gAAAIDo
-        AAB1MAAA6mAAADqYAAAXcJy6UTwAAAAEZ0FNQQAAsY58+1GTAAAAAXNSR0IArs4c6QAAAAZiS0dE
-        AP8A/wD/oL2nkwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAATtJREFUeNpjYBhowIghEtrAxv5FJIuD
-        gznt+48/SiAhTg6Wez9+/J31k+fNNIbVDb9wG+A6WYqHg/mAmryoVJSbPreqjChY+PaT1wzLdl38
-        euvh62dffvx1YNid+wymhRnZZl5G3lNhznqKBeE2HOJCvAysLExgDGK7mKqw/f/PwH/nyeuAX3qm
-        MxmuHfgL0sYE08/6WSgDZHOEqz4LLv+C5EBqQGphYnADuDhZMyJd9bkJBRpIDUgthgHff/xVUpUR
-        IRjqIDUgtRgGkAvgBnByMN+7/eQNQQ0gNSC1GAZ8+/57xvLdF78SMgCkBqQWw4DfvO9mgOJ5xe6L
-        f3BpBsmB1IDUYqYDYLz+kvNYe/vx64Dzt59ziAlxs/FxczL8+fuP4frDlwz9K49+PXT+/mNwQtpc
-        /oFqSXngAQBhNpAu8r39tQAAAABJRU5ErkJggg=="/>
-            Locals: 0
-        </a>
-        <a style="padding-left:16px;">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABIUlEQVR4Xs1SzUrDQBDOwXPFd1B7
-        8BjoZn4qAYlnEXyV+gLam2jp3ecQtHrQhxCvXrzYgwURCqYzG7vZbLa9Cf1gSPLNN9/sZiZJ/gOH
-        xuwxwh0hzBDhjRHPQ00UeZ5vSdGvxJQoO5VnCQC7jNmtvhPAOKxx+CsumU265IjgxdfIqWaE2aPP
-        OWhnW3x0tR/mFAxwJpoPiW+/iQURdSXx6YjipkyK0dCTOKRpuq0nbZBy1Ps+wIkjjkcXlYmNJ09q
-        0TZA+LI/yb9zbdAQW13E4JW517x7cT2JGShaBojZQEfVINegZbCS9GCM6VSjxktZrocwn+iSyJzf
-        xegnzClkUgfR+/uQJXkWwVxHVX3XYu2s38y8U1dEoEuy7BTEJNRuBhaOSXKGUqBScgAAAABJRU5E
-        rkJggg=="/>
-            Parameter: 3
-        </a>
-            </div>
-        </div>
-        <div class="sectionPageDiv">
-            <h3 id="general_interfaceCoverage_section" onclick="toggleSection('general_interfaceCoverage_div','general_interfaceCoverage_section')" class="extended anchored">
-                2. Interface Coverage
-            </h3>
-            <div id="general_interfaceCoverage_div">
-                <h4 class="extended anchored" onclick="toggleSection('Input_kind_table','Input_kind_header')" id="Input_kind_header">Inputs</h4>
-<div>
-    <table class="table" id="Input_kind_table">
-        <tr>
-            <th>Interface Name</th>
-            <th>Macro(s)</th>
-            <th>Formal Requirement(s)</th>
-            <th>Informal Requirement(s)</th>
-        </tr>
-            <tr>
-                <td>
-                    SeatOccupied
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    PowerMgtState
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    ErrorStatus
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    ButtonPressed
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
-            </tr>
-    </table>
-</div>
-                <h4 class="extended anchored" onclick="toggleSection('Output_kind_table','Output_kind_header')" id="Output_kind_header">Outputs</h4>
-<div>
-    <table class="table" id="Output_kind_table">
-        <tr>
-            <th>Interface Name (SL MIL)</th>
-            <th>Interface Name (SIL)</th>
-            <th>Macro(s)</th>
-            <th>Formal Requirement(s)</th>
-            <th>Informal Requirement(s)</th>
-        </tr>
-            <tr>
-                <td>
-                    LEDFeedback(1)
-                </td>
-                <td>
-                    LEDFeedback[0]
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    LEDFeedback(2)
-                </td>
-                <td>
-                    LEDFeedback[1]
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    LEDFeedback(3)
-                </td>
-                <td>
-                    LEDFeedback[2]
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Set_Heating_Coil
-                </td>
-                <td>
-                    Set_Heating_Coil
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
-            </tr>
-    </table>
-</div>
-                <h4 class="extended anchored" onclick="toggleSection('Local_kind_table','Local_kind_header')" id="Local_kind_header">Locals</h4>
-No interface data
-                <h4 class="extended anchored" onclick="toggleSection('Parameter_kind_table','Parameter_kind_header')" id="Parameter_kind_header">Parameter</h4>
-<div>
-    <table class="table" id="Parameter_kind_table">
-        <tr>
-            <th>Interface Name</th>
-            <th>Macro(s)</th>
-            <th>Formal Requirement(s)</th>
-            <th>Informal Requirement(s)</th>
-        </tr>
-            <tr>
-                <td>
-                    TempStg_High
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    TempStg_Low
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    TempStg_Med
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
-            </tr>
-    </table>
-</div>
-            </div>
-        </div>
-        <div class="sectionPageDiv">
             <h3 id="general_metaInformation_section" onclick="toggleSection('general_metaInformation_div','general_metaInformation_section')" class="extended anchored">
-                3. Meta Information
+                1. Meta Information
             </h3>
             <div id="general_metaInformation_div">
     <h4>General</h4>
@@ -1245,7 +1003,7 @@ No interface data
             </tr>
             <tr>
                 <td>Profile Creation Date</td>
-                <td>2025-06-23 16:26:00</td>
+                <td>2025-06-24 11:00:00</td>
             </tr>
             <tr>
                 <td>Profile Modifier</td>
@@ -1253,7 +1011,7 @@ No interface data
             </tr>
             <tr>
                 <td>Profile Modification Date</td>
-                <td>2025-06-24 09:25:39</td>
+                <td>2025-06-24 14:38:23</td>
             </tr>
             <tr>
                 <td>Profile Pre-Release</td>
@@ -1274,7 +1032,7 @@ No interface data
             </tr>
                 <tr>
                     <td>Last change (Test Project)</td>
-                    <td>[2025-06-24 09:23:31+02:00] Thabo Krick: initial files incl. tests in working state #ci (hash: 288f4482)</td>
+                    <td>[2025-06-24 14:35:28+02:00] Thabo Krick: Added tests and fixed heating stage order (hash: de009748)</td>
                 </tr>
         </table>
        </div>
@@ -1293,7 +1051,7 @@ No interface data
                 </tr>
                 <tr>
                     <td>Import Date</td>
-                    <td>2025-06-24 09:27:16</td>
+                    <td>2025-06-24 14:39:18</td>
                 </tr>
                 <tr>
                     <td>Matlab Version</td>
@@ -1309,7 +1067,7 @@ No interface data
                 </tr>
                 <tr>
                     <td>Model Version</td>
-                    <td>12.12</td>
+                    <td>12.17</td>
                 </tr>
                 <tr>
                     <td>Model File</td>
@@ -1348,7 +1106,7 @@ No interface data
                         </tr>
                         <tr>
                             <td>Last Saved</td>
-                            <td>2025-06-24 09:18:30</td>
+                            <td>2025-06-24 14:20:02</td>
                         </tr>
                         <tr>
                             <td>Created On</td>
@@ -1356,27 +1114,7 @@ No interface data
                         </tr>
                         <tr>
                             <td>Version</td>
-                            <td>1.7</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>Model File</td>
-                            <td>file:/C:/actions-runner/_work/smart-testing-genai/smart-testing-genai/model/check_conditions.slx</td>
-                        </tr>
-                        <tr>
-                            <td>Last Saved</td>
-                            <td>2025-06-20 09:40:03</td>
-                        </tr>
-                        <tr>
-                            <td>Created On</td>
-                            <td>2025-06-06 14:12:39</td>
-                        </tr>
-                        <tr>
-                            <td>Version</td>
-                            <td>1.4</td>
+                            <td>1.10</td>
                         </tr>
                         <tr>
                             <td></td>
@@ -1402,6 +1140,26 @@ No interface data
                             <td></td>
                             <td></td>
                         </tr>
+                        <tr>
+                            <td>Model File</td>
+                            <td>file:/C:/actions-runner/_work/smart-testing-genai/smart-testing-genai/model/check_conditions.slx</td>
+                        </tr>
+                        <tr>
+                            <td>Last Saved</td>
+                            <td>2025-06-24 10:58:48</td>
+                        </tr>
+                        <tr>
+                            <td>Created On</td>
+                            <td>2025-06-06 14:12:39</td>
+                        </tr>
+                        <tr>
+                            <td>Version</td>
+                            <td>1.6</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                        </tr>
                 </table>
         </div>
         <h5 class="collapsed anchored" onclick="toggleSection('C-Code_arch_table','C-Code_arch_header')" id="C-Code_arch_header">C-Code</h5>
@@ -1417,7 +1175,7 @@ No interface data
                 </tr>
                 <tr>
                     <td>Import Date</td>
-                    <td>2025-06-24 09:27:17</td>
+                    <td>2025-06-24 14:39:18</td>
                 </tr>
                 <tr>
                     <td>Source Code Files</td>
@@ -1454,7 +1212,7 @@ No interface data
             </tr>
                 <tr>
                     <td>Last change (Model)</td>
-                    <td>[2025-06-24 09:23:31+02:00] Thabo Krick: initial files incl. tests in working state #ci (hash: 288f4482)</td>
+                    <td>[2025-06-24 14:35:28+02:00] Thabo Krick: Added tests and fixed heating stage order (hash: de009748)</td>
                 </tr>
         </table>
      </div>   
@@ -1512,7 +1270,7 @@ No interface data
         </tr>
         <tr>
             <td>Import Date</td>
-            <td>2025-06-24 09:27:16</td>
+            <td>2025-06-24 14:39:18</td>
         </tr>
         <tr>
             <td>Matlab Version</td>
@@ -1528,7 +1286,7 @@ No interface data
         </tr>
         <tr>
             <td>Model Version</td>
-            <td>12.12</td>
+            <td>12.17</td>
         </tr>
         <tr>
             <td>Model File</td>
@@ -1567,7 +1325,7 @@ No interface data
         </tr>
         <tr>
             <td>Import Date</td>
-            <td>2025-06-24 09:27:17</td>
+            <td>2025-06-24 14:39:18</td>
         </tr>
         <tr>
             <td>Source Code Files</td>
@@ -1620,7 +1378,7 @@ No interface data
                         </tr>
                         <tr>
                             <td>Last import date</td>
-                            <td>2025-06-23</td>
+                            <td>2025-06-24</td>
                         </tr>
                         <tr>
                             <td>Name column</td>
@@ -1642,393 +1400,6 @@ No interface data
               </div>
             </div>
         </div>
-        <div class="sectionPageDiv">
-            <h3 id="general_messages_section" onclick="toggleSection('general_messages_div','general_messages_section')" class="extended anchored">
-                4. Messages
-            </h3>
-            <div id="general_messages_div">
-      <table class="table">
-        <tr>
-          <th style="width:2%"></th>
-          <th style="width:70%">Message</th>
-          <th style="width:14%">Severity</th>
-          <th style="width:14%">Origin</th>
-        </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Some report extensions are not included.</td>
-              <td>Information</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Scope &quot;seat_heating_control_step&quot; skipped for engine &quot;CV&quot; and metric &quot;Code Coverage&quot; as coverage threshold 100% already reached.</td>
-              <td>Information</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="WARNING_ICON"></td>
-              <td>Host compiler is configured to generate 64 bit binaries, model checking employs 32 bit semantics.</td>
-              <td>Warning</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="WARNING_ICON"></td>
-              <td>&quot;C:\Users\developer\AppData\Roaming\BTC\ep\25.2p0\1337\profiles\3a08-f79b-2e5\m
-          d\3271\anno\CodeAnnotation.c&quot;, line 805: warning: integer conversion
-          resulted in a change of sign
-    if ((left - right) == -1) obs-&gt;prop3 = 1;
-                          ^
-          detected during compilation of secondary translation unit
-                    &quot;C:\Users\developer\AppData\Roaming\BTC\ep\25.2p0\1337\prof
-                    iles\3a08-f79b-2e5\md\3271\anno\CodeAnnotation.c&quot;
-&quot;C:\Users\developer\AppData\Roaming\BTC\ep\25.2p0\1337\profiles\3a08-f79b-2e5\m
-          d\3271\anno\CodeAnnotation.c&quot;, line 1085: warning: integer conversion
-          resulted in a change of sign
-    if ((left - right) == -1) obs-&gt;prop3 = 1;
-                          ^
-          detected during compilation of secondary translation unit
-                    &quot;C:\Users\developer\AppData\Roaming\BTC\ep\25.2p0\1337\prof
-                    iles\3a08-f79b-2e5\md\3271\anno\CodeAnnotation.c&quot;
-&quot;C:\Users\developer\AppData\Roaming\BTC\ep\25.2p0\1337\profiles\3a08-f79b-2e5\m
-          d\3271\anno\CodeAnnotation.c&quot;, line 1365: warning: integer conversion
-          resulted in a change of sign
-    if ((left - right) == -1) obs-&gt;prop3 = 1;
-                          ^
-          detected during compilation of secondary translation unit
-                    &quot;C:\Users\developer\AppData\Roaming\BTC\ep\25.2p0\1337\prof
-                    iles\3a08-f79b-2e5\md\3271\anno\CodeAnnotation.c&quot;
-&quot;C:\Users\developer\AppData\Roaming\BTC\ep\25.2p0\1337\profiles\3a08-f79b-2e5\m
-          d\3271\anno\CodeAnnotation.c&quot;, line 1643: warning: integer conversion
-          resulted in a change of sign
-    if ((left - right) == -1) obs-&gt;prop3 = 1;
-                          ^
-          detected during compilation of secondary translation unit
-                    &quot;C:\Users\developer\AppData\Roaming\BTC\ep\25.2p0\1337\prof
-                    iles\3a08-f79b-2e5\md\3271\anno\CodeAnnotation.c&quot;
-&quot;C:\Users\developer\AppData\Roaming\BTC\ep\25.2p0\1337\profiles\3a08-f79b-2e5\m
-          d\3271\anno\CodeAnnotation.c&quot;, line 1920: warning: integer conversion
-          resulted in a change of sign
-    if ((left - right) == -1) obs-&gt;prop3 = 1;
-                          ^
-          detected during compilation of secondary translation unit
-                    &quot;C:\Users\developer\AppData\Roaming\BTC\ep\25.2p0\1337\prof
-                    iles\3a08-f79b-2e5\md\3271\anno\CodeAnnotation.c&quot;
-&quot;C:\Users\developer\AppData\Roaming\BTC\ep\25.2p0\1337\profiles\3a08-f79b-2e5\m
-          d\3271\anno\CodeAnnotation.c&quot;, line 2197: warning: integer conversion
-          resulted in a change of sign
-    if ((left - right) == -1) obs-&gt;prop3 = 1;
-                          ^
-          detected during compilation of secondary translation unit
-                    &quot;C:\Users\developer\AppData\Roaming\BTC\ep\25.2p0\1337\prof
-                    iles\3a08-f79b-2e5\md\3271\anno\CodeAnnotation.c&quot;
-</td>
-              <td>Warning</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="WARNING_ICON"></td>
-              <td>Host compiler is configured to generate 64 bit binaries, model checking employs 32 bit semantics.</td>
-              <td>Warning</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="WARNING_ICON"></td>
-              <td>Host compiler is configured to generate 64 bit binaries, model checking employs 32 bit semantics.</td>
-              <td>Warning</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="WARNING_ICON"></td>
-              <td>&quot;C:\Users\developer\AppData\Roaming\BTC\ep\25.2p0\1337\profiles\3a08-f79b-2e5\m
-          d\3204\anno\CodeAnnotation.c&quot;, line 805: warning: integer conversion
-          resulted in a change of sign
-    if ((left - right) == -1) obs-&gt;prop3 = 1;
-                          ^
-          detected during compilation of secondary translation unit
-                    &quot;C:\Users\developer\AppData\Roaming\BTC\ep\25.2p0\1337\prof
-                    iles\3a08-f79b-2e5\md\3204\anno\CodeAnnotation.c&quot;
-&quot;C:\Users\developer\AppData\Roaming\BTC\ep\25.2p0\1337\profiles\3a08-f79b-2e5\m
-          d\3204\anno\CodeAnnotation.c&quot;, line 1085: warning: integer conversion
-          resulted in a change of sign
-    if ((left - right) == -1) obs-&gt;prop3 = 1;
-                          ^
-          detected during compilation of secondary translation unit
-                    &quot;C:\Users\developer\AppData\Roaming\BTC\ep\25.2p0\1337\prof
-                    iles\3a08-f79b-2e5\md\3204\anno\CodeAnnotation.c&quot;
-&quot;C:\Users\developer\AppData\Roaming\BTC\ep\25.2p0\1337\profiles\3a08-f79b-2e5\m
-          d\3204\anno\CodeAnnotation.c&quot;, line 1365: warning: integer conversion
-          resulted in a change of sign
-    if ((left - right) == -1) obs-&gt;prop3 = 1;
-                          ^
-          detected during compilation of secondary translation unit
-                    &quot;C:\Users\developer\AppData\Roaming\BTC\ep\25.2p0\1337\prof
-                    iles\3a08-f79b-2e5\md\3204\anno\CodeAnnotation.c&quot;
-&quot;C:\Users\developer\AppData\Roaming\BTC\ep\25.2p0\1337\profiles\3a08-f79b-2e5\m
-          d\3204\anno\CodeAnnotation.c&quot;, line 1643: warning: integer conversion
-          resulted in a change of sign
-    if ((left - right) == -1) obs-&gt;prop3 = 1;
-                          ^
-          detected during compilation of secondary translation unit
-                    &quot;C:\Users\developer\AppData\Roaming\BTC\ep\25.2p0\1337\prof
-                    iles\3a08-f79b-2e5\md\3204\anno\CodeAnnotation.c&quot;
-&quot;C:\Users\developer\AppData\Roaming\BTC\ep\25.2p0\1337\profiles\3a08-f79b-2e5\m
-          d\3204\anno\CodeAnnotation.c&quot;, line 1920: warning: integer conversion
-          resulted in a change of sign
-    if ((left - right) == -1) obs-&gt;prop3 = 1;
-                          ^
-          detected during compilation of secondary translation unit
-                    &quot;C:\Users\developer\AppData\Roaming\BTC\ep\25.2p0\1337\prof
-                    iles\3a08-f79b-2e5\md\3204\anno\CodeAnnotation.c&quot;
-&quot;C:\Users\developer\AppData\Roaming\BTC\ep\25.2p0\1337\profiles\3a08-f79b-2e5\m
-          d\3204\anno\CodeAnnotation.c&quot;, line 2197: warning: integer conversion
-          resulted in a change of sign
-    if ((left - right) == -1) obs-&gt;prop3 = 1;
-                          ^
-          detected during compilation of secondary translation unit
-                    &quot;C:\Users\developer\AppData\Roaming\BTC\ep\25.2p0\1337\prof
-                    iles\3a08-f79b-2e5\md\3204\anno\CodeAnnotation.c&quot;
-</td>
-              <td>Warning</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="WARNING_ICON"></td>
-              <td>Host compiler is configured to generate 64 bit binaries, model checking employs 32 bit semantics.</td>
-              <td>Warning</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="WARNING_ICON"></td>
-              <td>Host compiler is configured to generate 64 bit binaries, model checking employs 32 bit semantics.</td>
-              <td>Warning</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="WARNING_ICON"></td>
-              <td>&quot;C:\Users\developer\AppData\Roaming\BTC\ep\25.2p0\1337\profiles\3a08-f79b-2e5\m
-          d\3132\anno\CodeAnnotation.c&quot;, line 805: warning: integer conversion
-          resulted in a change of sign
-    if ((left - right) == -1) obs-&gt;prop3 = 1;
-                          ^
-          detected during compilation of secondary translation unit
-                    &quot;C:\Users\developer\AppData\Roaming\BTC\ep\25.2p0\1337\prof
-                    iles\3a08-f79b-2e5\md\3132\anno\CodeAnnotation.c&quot;
-&quot;C:\Users\developer\AppData\Roaming\BTC\ep\25.2p0\1337\profiles\3a08-f79b-2e5\m
-          d\3132\anno\CodeAnnotation.c&quot;, line 1085: warning: integer conversion
-          resulted in a change of sign
-    if ((left - right) == -1) obs-&gt;prop3 = 1;
-                          ^
-          detected during compilation of secondary translation unit
-                    &quot;C:\Users\developer\AppData\Roaming\BTC\ep\25.2p0\1337\prof
-                    iles\3a08-f79b-2e5\md\3132\anno\CodeAnnotation.c&quot;
-&quot;C:\Users\developer\AppData\Roaming\BTC\ep\25.2p0\1337\profiles\3a08-f79b-2e5\m
-          d\3132\anno\CodeAnnotation.c&quot;, line 1365: warning: integer conversion
-          resulted in a change of sign
-    if ((left - right) == -1) obs-&gt;prop3 = 1;
-                          ^
-          detected during compilation of secondary translation unit
-                    &quot;C:\Users\developer\AppData\Roaming\BTC\ep\25.2p0\1337\prof
-                    iles\3a08-f79b-2e5\md\3132\anno\CodeAnnotation.c&quot;
-&quot;C:\Users\developer\AppData\Roaming\BTC\ep\25.2p0\1337\profiles\3a08-f79b-2e5\m
-          d\3132\anno\CodeAnnotation.c&quot;, line 1643: warning: integer conversion
-          resulted in a change of sign
-    if ((left - right) == -1) obs-&gt;prop3 = 1;
-                          ^
-          detected during compilation of secondary translation unit
-                    &quot;C:\Users\developer\AppData\Roaming\BTC\ep\25.2p0\1337\prof
-                    iles\3a08-f79b-2e5\md\3132\anno\CodeAnnotation.c&quot;
-&quot;C:\Users\developer\AppData\Roaming\BTC\ep\25.2p0\1337\profiles\3a08-f79b-2e5\m
-          d\3132\anno\CodeAnnotation.c&quot;, line 1920: warning: integer conversion
-          resulted in a change of sign
-    if ((left - right) == -1) obs-&gt;prop3 = 1;
-                          ^
-          detected during compilation of secondary translation unit
-                    &quot;C:\Users\developer\AppData\Roaming\BTC\ep\25.2p0\1337\prof
-                    iles\3a08-f79b-2e5\md\3132\anno\CodeAnnotation.c&quot;
-&quot;C:\Users\developer\AppData\Roaming\BTC\ep\25.2p0\1337\profiles\3a08-f79b-2e5\m
-          d\3132\anno\CodeAnnotation.c&quot;, line 2197: warning: integer conversion
-          resulted in a change of sign
-    if ((left - right) == -1) obs-&gt;prop3 = 1;
-                          ^
-          detected during compilation of secondary translation unit
-                    &quot;C:\Users\developer\AppData\Roaming\BTC\ep\25.2p0\1337\prof
-                    iles\3a08-f79b-2e5\md\3132\anno\CodeAnnotation.c&quot;
-</td>
-              <td>Warning</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="WARNING_ICON"></td>
-              <td>Host compiler is configured to generate 64 bit binaries, model checking employs 32 bit semantics.</td>
-              <td>Warning</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>The Simulink property &quot;DefaultParameterBehavior&quot; is set to the value &quot;Tunable&quot; in the extraction model.</td>
-              <td>Information</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>The Simulink property &quot;DefaultParameterBehavior&quot; is set to the value &quot;Tunable&quot; in the extraction model.</td>
-              <td>Information</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Updating architectures successful.</td>
-              <td>Information</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Executed user-defined command from hook script for use case: &#39;ARCH_ADD_META_INFO&#39;</td>
-              <td>Information</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>C-Code architecture &quot;seat_heating_control [C-Code]&quot; has successfully been imported.</td>
-              <td>Information</td>
-              <td>seat_heating_control [C-Code]</td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Simulink architecture &quot;seat_heating_control&quot; has successfully been imported.</td>
-              <td>Information</td>
-              <td>seat_heating_control</td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Default Compiler has been set to MinGW64 Compiler (C) (8.1.0)</td>
-              <td>Information</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Executed user-defined command from hook script for use case: &#39;ARCH_CODE_MODEL_PRE_LOAD&#39;</td>
-              <td>Information</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="WARNING_ICON"></td>
-              <td>[IN] interface &quot;seat_heating_control/shc/coil_led_control/ActivationCondition.UNKNOWN-SIGNAL-NAME&quot; of scope &quot;seat_heating_control/shc/coil_led_control&quot;: Signal name cannot be retrieved from compiled RTW Identifier because it is empty.</td>
-              <td>Warning</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="WARNING_ICON"></td>
-              <td>[OUT] interface &quot;seat_heating_control/shc/check_conditions/ActivationCondition.UNKNOWN-SIGNAL-NAME&quot; of scope &quot;seat_heating_control/shc/check_conditions&quot;: Signal name cannot be retrieved from compiled RTW Identifier because it is empty.</td>
-              <td>Warning</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="WARNING_ICON"></td>
-              <td>Subsystem &quot;seat_heating_control/shc/coil_led_control&quot; has incomplete interface mapping.</td>
-              <td>Warning</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="WARNING_ICON"></td>
-              <td>Subsystem &quot;seat_heating_control/shc/check_conditions&quot; has incomplete interface mapping.</td>
-              <td>Warning</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Source file rt_main.c has been ignored in c-code architecture as specified in hook functions.</td>
-              <td>Information</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Executed user-defined command from hook script for use case: &#39;EP_ADD_META_INFO&#39;</td>
-              <td>Information</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Test Case &#39;Heating Cycle Test&#39; has been successfully imported from &#39;C:\actions-runner\_work\smart-testing-genai\smart-testing-genai\test\seat_heating_control_btcdata\testcases\Heating Cycle Test.tc.json&#39;</td>
-              <td>Information</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Test Case &#39;Activation Conditions Test&#39; has been successfully imported from &#39;C:\actions-runner\_work\smart-testing-genai\smart-testing-genai\test\seat_heating_control_btcdata\testcases\Activation Conditions Test.tc.json&#39;</td>
-              <td>Information</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Requirement with name &#39;High Heating&#39; has been imported.</td>
-              <td>Information</td>
-              <td>High Heating</td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Requirement with name &#39;Reactivation&#39; has been imported.</td>
-              <td>Information</td>
-              <td>Reactivation</td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Requirement with name &#39;Initial Request&#39; has been imported.</td>
-              <td>Information</td>
-              <td>Initial Request</td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Requirement with name &#39;No Heating&#39; has been imported.</td>
-              <td>Information</td>
-              <td>No Heating</td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Requirement with name &#39;Activation Conditions&#39; has been imported.</td>
-              <td>Information</td>
-              <td>Activation Conditions</td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Requirement with name &#39;Medium Heating&#39; has been imported.</td>
-              <td>Information</td>
-              <td>Medium Heating</td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Requirement with name &#39;Low Heating&#39; has been imported.</td>
-              <td>Information</td>
-              <td>Low Heating</td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Requirement with name &#39;Heating Cycle&#39; has been imported.</td>
-              <td>Information</td>
-              <td>Heating Cycle</td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Simulink architecture &quot;seat_heating_control&quot; has successfully been imported.</td>
-              <td>Information</td>
-              <td>seat_heating_control</td>
-            </tr>
-            <tr>
-              <td class="INFO_ICON"></td>
-              <td>Default Compiler has been set to MinGW 64 Compiler (C) (8.1.0)</td>
-              <td>Information</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="CRITICAL_ICON"></td>
-              <td>Default Compiler has been changed from MinGW64 Compiler (C) (8.1.0) to MinGW 64 Compiler (C) (8.1.0)</td>
-              <td>Critical</td>
-              <td></td>
-            </tr>
-      </table>
-            </div>
-        </div>
     </div>
     <!-- Page: rbt -->
     <div class="overviewDiv" id="rbt">
@@ -2046,8 +1417,8 @@ No interface data
           <td style="min-width:300px">
       <div class="bar-chart">
         <div class="chart">
-    <div class="okBar bar size-1" style="flex-grow : 1"></div>
-    <div class="warningBar bar size-1" style="flex-grow : 1"></div>
+    <div class="okBar bar size-2" style="flex-grow : 2"></div>
+    <div class="warningBar bar size-0" style="flex-grow : 0"></div>
     <div class="errorBar bar size-0" style="flex-grow : 0"></div>
     <div class="unknownBar bar size-0" style="flex-grow : 0"></div>
     <div class="errorBar bar size-0" style="flex-grow : 0"></div>
@@ -2057,7 +1428,7 @@ No interface data
       </td>
       <td>
       <span style="padding-left: 15px;">
-          50% Passed
+          100% Passed
         </span>
       </td>
       </tr>
@@ -2069,8 +1440,8 @@ No interface data
           <td style="min-width:300px">
       <div class="bar-chart">
         <div class="chart">
-    <div class="okBar bar size-1" style="flex-grow : 1"></div>
-    <div class="warningBar bar size-1" style="flex-grow : 1"></div>
+    <div class="okBar bar size-2" style="flex-grow : 2"></div>
+    <div class="warningBar bar size-0" style="flex-grow : 0"></div>
     <div class="errorBar bar size-0" style="flex-grow : 0"></div>
     <div class="unknownBar bar size-0" style="flex-grow : 0"></div>
     <div class="errorBar bar size-0" style="flex-grow : 0"></div>
@@ -2080,7 +1451,7 @@ No interface data
       </td>
       <td>
       <span style="padding-left: 15px;">
-          50% Passed
+          100% Passed
         </span>
       </td>
       </tr>
@@ -2108,9 +1479,9 @@ No interface data
                 <div class="bar-chart">
                     
                     <div class="chart">
-    <div class="okBar bar size-1" style="flex-grow : 1"></div>
+    <div class="okBar bar size-2" style="flex-grow : 2"></div>
     <div class="unknownBar bar size-0" style="flex-grow : 0"></div>
-    <div class="warningBar bar size-1" style="flex-grow : 1"></div>
+    <div class="warningBar bar size-0" style="flex-grow : 0"></div>
     <div class="errorBar bar size-0" style="flex-grow : 0"></div>
     <div class="errorBar bar size-0" style="flex-grow : 0"></div>
     <div class="unknownBar bar size-0" style="flex-grow : 0"></div>
@@ -2118,7 +1489,7 @@ No interface data
                     
                 </div>
                 </td>
-                <td><span style="padding-left: 15px;">50% Passed</span>
+                <td><span style="padding-left: 15px;">100% Passed</span>
                 </td>
               </tr>
             <tr>
@@ -2128,9 +1499,9 @@ No interface data
                 <div class="bar-chart">
                     
                     <div class="chart">
-    <div class="okBar bar size-1" style="flex-grow : 1"></div>
+    <div class="okBar bar size-2" style="flex-grow : 2"></div>
     <div class="unknownBar bar size-0" style="flex-grow : 0"></div>
-    <div class="warningBar bar size-1" style="flex-grow : 1"></div>
+    <div class="warningBar bar size-0" style="flex-grow : 0"></div>
     <div class="errorBar bar size-0" style="flex-grow : 0"></div>
     <div class="errorBar bar size-0" style="flex-grow : 0"></div>
     <div class="unknownBar bar size-0" style="flex-grow : 0"></div>
@@ -2138,7 +1509,7 @@ No interface data
                     
                 </div>
                 </td>
-                <td><span style="padding-left: 15px;">50% Passed</span>
+                <td><span style="padding-left: 15px;">100% Passed</span>
                 </td>
               </tr>
             
@@ -2154,11 +1525,11 @@ No interface data
     <div>
     <div class="sc-gauge">
         <div class="sc-background">
-            <div class="sc-percentage unreachable_blue" style="transform:rotate(164.348deg)"></div>
-            <div class="sc-percentage justified_green" style="transform:rotate(159.652deg)"></div>
-            <div class="sc-percentage covered" style="transform:rotate(159.652deg)"></div>
+            <div class="sc-percentage unreachable_blue" style="transform:rotate(174.098deg)"></div>
+            <div class="sc-percentage justified_green" style="transform:rotate(169.672deg)"></div>
+            <div class="sc-percentage covered" style="transform:rotate(169.672deg)"></div>
             <div class="sc-mask"></div>
-            <span class="sc-value">91.3%</span>
+            <span class="sc-value">96.7%</span>
         </div>
     <span style="font-size:14px;">Code Coverage (Handled Rate)</span>
     </div>
@@ -2405,6 +1776,59 @@ No interface data
                 </tr>
             </table>
           <h5>
+            check_conditions
+          </h5>
+            <table class="table">
+              <tr>
+                <th>Check</th>
+                <th>Name</th>
+                <th>Kind</th>
+                <th>Data type</th>
+                <th>Resolution</th>
+                <th>Offset</th>
+                <th>Relative tolerance [%]
+                </th>
+                <th>Absolute tolerance [Unit]
+                </th>
+                <th>Lead tolerance [s]
+                </th>
+                <th>Lag tolerance [s]
+                </th>
+              </tr>
+                <tr>
+                  <td style="text-align:center">
+                        <div class="ok-glyph ok-color"></div>
+                  </td>
+                  <td width="*">
+                    SystemActive
+                  </td>
+                  <td>
+                    Output
+                  </td>
+                  <td>
+                    boolean
+                  </td>
+                  <td>
+                    2^0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                </tr>
+            </table>
+          <h5>
             coil_led_control
           </h5>
             <table class="table">
@@ -2581,13 +2005,13 @@ No interface data
               </td>
               <td>
     
-    Activation Conditions Test
+    Activation Condition Test
               </td>
               <td>
-                10
+                4
               </td>
               <td>
-        <a class="link" onclick="scrollToTargetAdjusted('22g_req');">
+        <a class="link" onclick="scrollToTargetAdjusted('22a_req');">
       Activation Conditions
         </a>
     <br>
@@ -2599,15 +2023,15 @@ No interface data
                 Default Test Cases
               </td>
                   <td>
-                    <div class="        warning-color warning-glyph
+                    <div class="        ok-glyph ok-color
 ">
-                      No Verdict
+                      Passed
                     </div>
                   </td>
                   <td>
-                    <div class="        warning-color warning-glyph
+                    <div class="        ok-glyph ok-color
 ">
-                      No Verdict
+                      Passed
                     </div>
                   </td>
             </tr>
@@ -2625,10 +2049,10 @@ No interface data
     Heating Cycle Test
               </td>
               <td>
-                10
+                18
               </td>
               <td>
-        <a class="link" onclick="scrollToTargetAdjusted('22a_req');">
+        <a class="link" onclick="scrollToTargetAdjusted('22i_req');">
       Heating Cycle
         </a>
     <br>
@@ -2677,7 +2101,7 @@ No interface data
     <th >Passed (SL MIL)</th>
     <th >Passed (SIL)</th>
   </tr>
-  <tr id="22g_req">
+  <tr id="22a_req">
     <td>        Activation Conditions
 </td>
     <td>The system shall only be active while the following conditions are met: 
@@ -2689,12 +2113,12 @@ No interface data
     <div class="ok-glyph ok-color">Covered
 </div>
 </td>
-    <td>        0%
+    <td>        100%
 </td>
-    <td>        0%
+    <td>        100%
 </td>
   </tr>
-  <tr id="22a_req">
+  <tr id="22i_req">
     <td>        Heating Cycle
 </td>
     <td>When active, the system shall cycle through the temperature stages and move from one stage to the next on each button press:
@@ -2712,7 +2136,7 @@ No interface data
     <td>        100%
 </td>
   </tr>
-  <tr id="22o_req">
+  <tr id="22g_req">
     <td>        High Heating
 </td>
     <td>When the system is active and is in the HIGH temperature stage:
@@ -2728,7 +2152,7 @@ No interface data
     <td>        n.a.
 </td>
   </tr>
-  <tr id="22k_req">
+  <tr id="22e_req">
     <td>        Initial Request
 </td>
     <td>When the system is active but the button has not been pressed it shall initially be in the NO HEATING temperature stage</td>
@@ -2742,7 +2166,7 @@ No interface data
     <td>        n.a.
 </td>
   </tr>
-  <tr id="22c_req">
+  <tr id="22o_req">
     <td>        Low Heating
 </td>
     <td>When the system is active and is in the LOW temperature stage:
@@ -2758,7 +2182,7 @@ No interface data
     <td>        n.a.
 </td>
   </tr>
-  <tr id="22e_req">
+  <tr id="22m_req">
     <td>        Medium Heating
 </td>
     <td>When the system is active and is in the MEDIUM temperature stage:
@@ -2774,7 +2198,7 @@ No interface data
     <td>        n.a.
 </td>
   </tr>
-  <tr id="22i_req">
+  <tr id="22k_req">
     <td>        No Heating
 </td>
     <td>When the system is active and is in the NO HEATING temperature stage:
@@ -2790,7 +2214,7 @@ No interface data
     <td>        n.a.
 </td>
   </tr>
-  <tr id="22m_req">
+  <tr id="22c_req">
     <td>        Reactivation
 </td>
     <td>When the system is reactivated (activation conditions are once again met) it shall return to the same temperature stage that was active before.</td>
@@ -2826,11 +2250,11 @@ No interface data
   
   <tr>
     <td>Statement (STM)</td>
-    <td>30</td>
-    <td>28</td>
-    <td>93.3%</td>
-    <td>28</td>
-    <td>93.3%</td>
+    <td>31</td>
+    <td>31</td>
+    <td>100.0%</td>
+    <td>31</td>
+    <td>100.0%</td>
     <td>0</td>
     <td>0.0%</td>
     <td>0</td>
@@ -2840,11 +2264,11 @@ No interface data
   
   <tr>
     <td>Decision/Branch (D)</td>
-    <td>16</td>
-    <td>15</td>
-    <td>93.8%</td>
-    <td>15</td>
-    <td>93.8%</td>
+    <td>18</td>
+    <td>18</td>
+    <td>100.0%</td>
+    <td>18</td>
+    <td>100.0%</td>
     <td>0</td>
     <td>0.0%</td>
     <td>0</td>
@@ -2854,11 +2278,11 @@ No interface data
   
   <tr>
     <td>Condition (C)</td>
-    <td>28</td>
-    <td>24</td>
-    <td>85.7%</td>
-    <td>24</td>
-    <td>85.7%</td>
+    <td>32</td>
+    <td>31</td>
+    <td>96.9%</td>
+    <td>31</td>
+    <td>96.9%</td>
     <td>0</td>
     <td>0.0%</td>
     <td>0</td>
@@ -2868,11 +2292,11 @@ No interface data
   
   <tr>
     <td>C/DC and MC/DC (MCDC)</td>
-    <td>52</td>
-    <td>47</td>
-    <td>90.4%</td>
-    <td>47</td>
-    <td>90.4%</td>
+    <td>58</td>
+    <td>57</td>
+    <td>98.3%</td>
+    <td>57</td>
+    <td>98.3%</td>
     <td>0</td>
     <td>0.0%</td>
     <td>0</td>
@@ -2994,67 +2418,6 @@ No interface data
 </table>
 
 
-  <h4 class="anchored extended" onclick="toggleSection('DC_id_104020_stats','DC_stats_id_104020_header')" id="DC_stats_id_104020_header">Domain Checks Statistics</h4>
-  <div id="DC_id_104020_stats">
-      <table class="table coverage-table-sizing">
-        <tr>
-          <th>Type</th>
-          <th>Total</th>
-          <th>Handled</th>
-          <th>Covered</th>
-          <th>Unreachable</th>
-        </tr>
-            <tr>
-              <td>Valid Ranges</td>
-              <td>
-                0
-              </td>
-              <td>
-                n/a
-              </td>
-              <td>
-                n/a
-              </td>
-              <td>
-                n/a
-              </td>
-            </tr>
-            <tr>
-              <td>Invalid Ranges</td>
-              <td>
-                0
-              </td>
-              <td>
-                n/a
-              </td>
-              <td>
-                n/a
-              </td>
-              <td>
-                n/a
-              </td>
-            </tr>
-      </table>
-  </div>
-<h4 class="anchored extended" onclick="toggleSection('UDCG_stats_id_104030_table','UDCG_stats_id_104030_header')" id="UDCG_stats_id_104030_header" >User-defined Coverage Goals Statistics</h4>
-<div id="UDCG_stats_id_104030_table">
-<table class="table coverage-table-sizing" >
-  <tr>            
-    <th>Type</th>
-    <th>Total</th>
-    <th>Handled</th>
-    <th>Covered</th>
-    <th>Unreachable</th>
-  </tr>
-  <tr>
-    <td>User-defined Coverage Goals</td>
-    <td>0</td>
-    <td>n/a</td>
-    <td>n/a</td>
-    <td>n/a</td>
-  </tr>
-</table>
-</div>
             </div>
         </div>
     </div>
@@ -3068,7 +2431,7 @@ No interface data
   <table>
     <tr>
     <td><span style="padding-right: 15px;">
-            <a class="link" onclick="expandSectionOnNavigation('SL MIL vs SIL_2oh_section','SL MIL vs SIL_2oh_header'); scrollToTargetAdjusted('SL MIL vs SIL_2oh_header');">
+            <a class="link" onclick="expandSectionOnNavigation('SL MIL vs SIL_2rK_section','SL MIL vs SIL_2rK_header'); scrollToTargetAdjusted('SL MIL vs SIL_2rK_header');">
                  SL MIL vs SIL 
             </a>
         </span>
@@ -3077,7 +2440,7 @@ No interface data
       <div class="bar-chart">
         
         <div class="chart">
-    <div class="okBar bar size-3" style="flex-grow : 3"></div>
+    <div class="okBar bar size-2" style="flex-grow : 2"></div>
     <div class="okBar bar size-0" style="flex-grow : 0"></div>
     <div class="errorBar bar size-0" style="flex-grow : 0"></div>
     <div class="errorBar bar size-0" style="flex-grow : 0"></div>
@@ -3097,8 +2460,8 @@ No interface data
     <div class="sc-gauge">
         <div class="sc-background">
             <div class="sc-percentage unreachable_blue" style="transform:rotate(180deg)"></div>
-            <div class="sc-percentage justified_green" style="transform:rotate(175.304deg)"></div>
-            <div class="sc-percentage covered" style="transform:rotate(175.304deg)"></div>
+            <div class="sc-percentage justified_green" style="transform:rotate(175.574deg)"></div>
+            <div class="sc-percentage covered" style="transform:rotate(175.574deg)"></div>
             <div class="sc-mask"></div>
             <span class="sc-value">100%</span>
         </div>
@@ -3151,7 +2514,7 @@ No interface data
     </tr>
       <tr>
         <td>
-        <a class="link" onclick="expandSectionOnNavigation('SL MIL vs SIL_2oh_section','SL MIL vs SIL_2oh_header'); scrollToTargetAdjusted('SL MIL vs SIL_2oh_header');">
+        <a class="link" onclick="expandSectionOnNavigation('SL MIL vs SIL_2rK_section','SL MIL vs SIL_2rK_header'); scrollToTargetAdjusted('SL MIL vs SIL_2rK_header');">
         SL MIL vs SIL 
         </a>
         </td>
@@ -3162,8 +2525,8 @@ No interface data
       </tr>
   </table>
 
-    <h3 class="collapsed anchored" onclick="toggleSection('SL MIL vs SIL_2oh_section','SL MIL vs SIL_2oh_header')" id="SL MIL vs SIL_2oh_header">SL MIL vs SIL</h3>
-    <div class="hidden" id="SL MIL vs SIL_2oh_section">
+    <h3 class="collapsed anchored" onclick="toggleSection('SL MIL vs SIL_2rK_section','SL MIL vs SIL_2rK_header')" id="SL MIL vs SIL_2rK_header">SL MIL vs SIL</h3>
+    <div class="hidden" id="SL MIL vs SIL_2rK_section">
     <h4>Comparison Results</h4>
       <table class="table">
   <tr>
@@ -3182,7 +2545,7 @@ No interface data
                   <span class="icon-sdc" title="No problems during comparison"></span>:
  SIL_Heating Cycle Test
         </td>
-        <td> 10</td>
+        <td> 18</td>
         <td><div class="        ok-glyph ok-color
 "> Passed</div> </td>
       </tr>
@@ -3200,26 +2563,12 @@ No interface data
         <td><div class="        ok-glyph ok-color
 "> Passed</div> </td>
       </tr>
-      <tr>
-        <td>
-            #3
-        </td>
-        <td>
-                  <span class="icon-sdc" title="No problems during comparison"></span>:
- SL MIL_SV_ATG_2 <br>
-                  <span class="icon-sdc" title="No problems during comparison"></span>:
- SIL_SV_ATG_2
-        </td>
-        <td> 1</td>
-        <td><div class="        ok-glyph ok-color
-"> Passed</div> </td>
-      </tr>
     </table>
 
-    <h4 class="extended anchored" onclick="toggleSection('SL MIL vs SIL_2oh_toleranceDef_table','SL MIL vs SIL_2oh_toleranceDef_header')" id="SL MIL vs SIL_2oh_toleranceDef_header">
+    <h4 class="extended anchored" onclick="toggleSection('SL MIL vs SIL_2rK_toleranceDef_table','SL MIL vs SIL_2rK_toleranceDef_header')" id="SL MIL vs SIL_2rK_toleranceDef_header">
         Tolerance Definitions
     </h4>
-      <table class="table" id="SL MIL vs SIL_2oh_toleranceDef_table">
+      <table class="table" id="SL MIL vs SIL_2rK_toleranceDef_table">
         <tr>
           <th>Check</th>
           
@@ -3438,6 +2787,30 @@ No interface data
             <td style="text-align:center">
                 <div class="ok-glyph ok-color"></div>
             </td>
+            <td>SystemActive</td>
+
+            <td>Output</td>
+
+            <td>boolean</td>
+
+            <td>2^0</td>
+
+            <td>0.0</td>
+
+            <td>0.0%</td>
+
+            <td>0.0</td>
+
+            <td>0.0</td>
+
+            <td>0.0</td>
+
+          </tr>
+
+          <tr>
+            <td style="text-align:center">
+                <div class="ok-glyph ok-color"></div>
+            </td>
             <td>TemperatureStage</td>
 
             <td>Output</td>
@@ -3484,10 +2857,10 @@ No interface data
   
   <tr>
     <td>Statement (STM)</td>
-    <td>30</td>
-    <td>30</td>
+    <td>31</td>
+    <td>31</td>
     <td>100.0%</td>
-    <td>30</td>
+    <td>31</td>
     <td>100.0%</td>
     <td>0</td>
     <td>0.0%</td>
@@ -3498,10 +2871,10 @@ No interface data
   
   <tr>
     <td>Decision/Branch (D)</td>
-    <td>16</td>
-    <td>16</td>
+    <td>18</td>
+    <td>18</td>
     <td>100.0%</td>
-    <td>16</td>
+    <td>18</td>
     <td>100.0%</td>
     <td>0</td>
     <td>0.0%</td>
@@ -3512,10 +2885,10 @@ No interface data
   
   <tr>
     <td>Condition (C)</td>
-    <td>28</td>
-    <td>28</td>
+    <td>32</td>
+    <td>32</td>
     <td>100.0%</td>
-    <td>28</td>
+    <td>32</td>
     <td>100.0%</td>
     <td>0</td>
     <td>0.0%</td>
@@ -3526,10 +2899,10 @@ No interface data
   
   <tr>
     <td>C/DC and MC/DC (MCDC)</td>
-    <td>52</td>
-    <td>52</td>
+    <td>58</td>
+    <td>58</td>
     <td>100.0%</td>
-    <td>52</td>
+    <td>58</td>
     <td>100.0%</td>
     <td>0</td>
     <td>0.0%</td>
@@ -3652,67 +3025,6 @@ No interface data
 </table>
 
 
-  <h4 class="anchored extended" onclick="toggleSection('DC_id_204020_stats','DC_stats_id_204020_header')" id="DC_stats_id_204020_header">Domain Checks Statistics</h4>
-  <div id="DC_id_204020_stats">
-      <table class="table coverage-table-sizing">
-        <tr>
-          <th>Type</th>
-          <th>Total</th>
-          <th>Handled</th>
-          <th>Covered</th>
-          <th>Unreachable</th>
-        </tr>
-            <tr>
-              <td>Valid Ranges</td>
-              <td>
-                0
-              </td>
-              <td>
-                n/a
-              </td>
-              <td>
-                n/a
-              </td>
-              <td>
-                n/a
-              </td>
-            </tr>
-            <tr>
-              <td>Invalid Ranges</td>
-              <td>
-                0
-              </td>
-              <td>
-                n/a
-              </td>
-              <td>
-                n/a
-              </td>
-              <td>
-                n/a
-              </td>
-            </tr>
-      </table>
-  </div>
-<h4 class="anchored extended" onclick="toggleSection('UDCG_stats_id_204030_table','UDCG_stats_id_204030_header')" id="UDCG_stats_id_204030_header" >User-defined Coverage Goals Statistics</h4>
-<div id="UDCG_stats_id_204030_table">
-<table class="table coverage-table-sizing" >
-  <tr>            
-    <th>Type</th>
-    <th>Total</th>
-    <th>Handled</th>
-    <th>Covered</th>
-    <th>Unreachable</th>
-  </tr>
-  <tr>
-    <td>User-defined Coverage Goals</td>
-    <td>0</td>
-    <td>n/a</td>
-    <td>n/a</td>
-    <td>n/a</td>
-  </tr>
-</table>
-</div>
             </div>
         </div>
     </div>
