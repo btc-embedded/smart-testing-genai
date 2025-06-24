@@ -19,7 +19,7 @@ ep.put('preferences', [{
     'preferenceValue': f'python "{hook_file}"'}])
 # Load a BTC EmbeddedPlatform profile (*.epp) and update it
 ep.get('profiles/' + profile_path + '?discardCurrentProfile=true', message="Loading live testing profile")
-payload = { 'initScript' : os.path.abspath('test/init.m') }
+payload = { 'initScript' : os.path.abspath('model/init.m') }
 ep.put('architecturesConvert', payload, message="Upgrading to MIL+SIL profile")
 
 # Execute requirements-based tests
