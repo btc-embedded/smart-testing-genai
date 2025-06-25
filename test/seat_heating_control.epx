@@ -4,7 +4,7 @@
     "Creator" : "developer",
     "Creation Date" : "24 Jun 2025, 15:57",
     "Modifier" : "developer",
-    "Modification Date" : "24 Jun 2025, 15:57",
+    "Modification Date" : "25 Jun 2025, 10:39",
     "Creation Tool Version" : "25.2p0",
     "OS" : "Windows",
     "Path" : "file:/E:/work/smart-testing-genai/test/seat_heating_control.epx",
@@ -50,5 +50,12 @@
       "Version" : "1.6"
     } ],
     "Visible" : "Simulink"
-  }
+  },
+  "Requirements Sources" : [ {
+    "seatheater" : {
+      "Project URL" : "http://polarion03.prom.local/polarion/redirect/project/seatheater",
+      "Baseline Name" : "Head / Current",
+      "Baseline Revision" : "Current"
+    }
+  } ]
 }
