@@ -1,26 +1,26 @@
 {
   "Profile" : {
-    "Version" : "25.2p0",
+    "Version" : "25.2p1.2",
     "Creator" : "developer",
-    "Creation Date" : "24 Jun 2025, 15:57",
+    "Creation Date" : "17 Nov 2025, 09:16",
     "Modifier" : "developer",
-    "Modification Date" : "24 Jun 2025, 15:57",
-    "Creation Tool Version" : "25.2p0",
+    "Modification Date" : "17 Nov 2025, 10:04",
+    "Creation Tool Version" : "25.2p1.2",
     "OS" : "Windows",
     "Path" : "file:/E:/work/smart-testing-genai/test/seat_heating_control.epx",
-    "PreRelease" : true
+    "PreRelease" : false
   },
   "Compiler" : {
-    "Name" : "mingw64",
-    "Info" : "MinGW64 Compiler (C) (8.1.0)",
+    "Name" : "MSVC150",
+    "Info" : "Microsoft Visual C++ 2017 Professional (C) 64bit (15.0)",
     "Bitsize" : 64,
-    "Replaceable" : false,
+    "Replaceable" : true,
     "Default" : true
   },
   "Architectures" : {
     "Simulink" : {
       "Creator" : "nabilekhoury",
-      "Import Date" : "24/06/2025 15:57",
+      "Import Date" : "17/11/2025 09:18",
       "Matlab Version" : "Matlab 24.2 (R2024b)",
       "Simulink Version" : "Simulink 24.2 (R2024b)",
       "Model Creation Date" : "15/06/2021 12:12",
@@ -50,5 +50,12 @@
       "Version" : "1.6"
     } ],
     "Visible" : "Simulink"
-  }
+  },
+  "Requirements Sources" : [ {
+    "seatheater" : {
+      "Project URL" : "http://polarion03.prom.local/polarion/redirect/project/seatheater",
+      "Baseline Name" : "Head / Current",
+      "Baseline Revision" : "Current"
+    }
+  } ]
 }

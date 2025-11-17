@@ -11,7 +11,7 @@ project_name = os.path.basename(profile_path)[:-4]
 hook_file = os.path.abspath('test/btc_hooks.py')
 
 # BTC EmbeddedPlatform API object
-ep = EPRestApi(version='25.2p0')
+ep = EPRestApi()
 
 # configure hook for enhanced traceability
 ep.put('preferences', [{

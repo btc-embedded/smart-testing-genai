@@ -1,0 +1,17 @@
+{
+  "version":"1.0",
+  "configuration":{
+    "signals":{
+      "outputs":[ {
+        "name":"LEDFeedback(2)",
+        "folded":false
+      }, {
+        "name":"LEDFeedback(3)",
+        "folded":false
+      }, {
+        "name":"LEDFeedback(1)",
+        "folded":false
+      } ]
+    }
+  }
+}

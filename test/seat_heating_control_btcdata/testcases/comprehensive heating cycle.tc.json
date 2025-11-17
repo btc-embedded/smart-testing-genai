@@ -1,0 +1,254 @@
+{
+  "version":"1.1",
+  "metaData":{
+    "name":"comprehensive heating cycle",
+    "scopePath":"",
+    "architecture":"seat_heating_control",
+    "length":"18",
+    "draft":"false",
+    "created":"17 Nov 2025, 09:56",
+    "lastUpdated":"17 Nov 2025, 10:00"
+  },
+  "vectorContent":{
+    "steps":[ {
+      "step":{
+        "number":"0",
+        "inputs":[ {
+          "SeatOccupied":"1"
+        }, {
+          "PowerMgtState":"1"
+        }, {
+          "ErrorStatus":"0"
+        }, {
+          "ButtonPressed":"sg(Square, 18, Simulink, false, true, f=4, a=1, o=0, true)"
+        } ],
+        "outputs":[ {
+          "LEDFeedback(1)":"0"
+        }, {
+          "LEDFeedback(2)":"0"
+        }, {
+          "LEDFeedback(3)":"0"
+        }, {
+          "Set_Heating_Coil":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"1",
+        "outputs":[ {
+          "LEDFeedback(1)":"0"
+        }, {
+          "LEDFeedback(2)":"0"
+        }, {
+          "LEDFeedback(3)":"0"
+        }, {
+          "Set_Heating_Coil":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"2",
+        "comment":"initial button push: high temp",
+        "outputs":[ {
+          "LEDFeedback(1)":"1"
+        }, {
+          "LEDFeedback(2)":"1"
+        }, {
+          "LEDFeedback(3)":"1"
+        }, {
+          "Set_Heating_Coil":"af(TempStg_High, 4, false)"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"3",
+        "outputs":[ {
+          "LEDFeedback(1)":"1"
+        }, {
+          "LEDFeedback(2)":"1"
+        }, {
+          "LEDFeedback(3)":"1"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"4",
+        "outputs":[ {
+          "LEDFeedback(1)":"1"
+        }, {
+          "LEDFeedback(2)":"1"
+        }, {
+          "LEDFeedback(3)":"1"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"5",
+        "outputs":[ {
+          "LEDFeedback(1)":"1"
+        }, {
+          "LEDFeedback(2)":"1"
+        }, {
+          "LEDFeedback(3)":"1"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"6",
+        "comment":"second button push: med. temp",
+        "outputs":[ {
+          "LEDFeedback(1)":"1"
+        }, {
+          "LEDFeedback(2)":"1"
+        }, {
+          "LEDFeedback(3)":"0"
+        }, {
+          "Set_Heating_Coil":"af(TempStg_Med, 4, false)"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"7",
+        "outputs":[ {
+          "LEDFeedback(1)":"1"
+        }, {
+          "LEDFeedback(2)":"1"
+        }, {
+          "LEDFeedback(3)":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"8",
+        "outputs":[ {
+          "LEDFeedback(1)":"1"
+        }, {
+          "LEDFeedback(2)":"1"
+        }, {
+          "LEDFeedback(3)":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"9",
+        "outputs":[ {
+          "LEDFeedback(1)":"1"
+        }, {
+          "LEDFeedback(2)":"1"
+        }, {
+          "LEDFeedback(3)":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"10",
+        "comment":"third button push: low temp",
+        "outputs":[ {
+          "LEDFeedback(1)":"1"
+        }, {
+          "LEDFeedback(2)":"0"
+        }, {
+          "LEDFeedback(3)":"0"
+        }, {
+          "Set_Heating_Coil":"af(TempStg_Low, 4, false)"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"11",
+        "outputs":[ {
+          "LEDFeedback(1)":"1"
+        }, {
+          "LEDFeedback(2)":"0"
+        }, {
+          "LEDFeedback(3)":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"12",
+        "outputs":[ {
+          "LEDFeedback(1)":"1"
+        }, {
+          "LEDFeedback(2)":"0"
+        }, {
+          "LEDFeedback(3)":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"13",
+        "outputs":[ {
+          "LEDFeedback(1)":"1"
+        }, {
+          "LEDFeedback(2)":"0"
+        }, {
+          "LEDFeedback(3)":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"14",
+        "comment":"fourth button push: off",
+        "outputs":[ {
+          "LEDFeedback(1)":"0"
+        }, {
+          "LEDFeedback(2)":"0"
+        }, {
+          "LEDFeedback(3)":"0"
+        }, {
+          "Set_Heating_Coil":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"15",
+        "outputs":[ {
+          "LEDFeedback(1)":"0"
+        }, {
+          "LEDFeedback(2)":"0"
+        }, {
+          "LEDFeedback(3)":"0"
+        }, {
+          "Set_Heating_Coil":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"16",
+        "outputs":[ {
+          "LEDFeedback(1)":"0"
+        }, {
+          "LEDFeedback(2)":"0"
+        }, {
+          "LEDFeedback(3)":"0"
+        }, {
+          "Set_Heating_Coil":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"17",
+        "outputs":[ {
+          "LEDFeedback(1)":"0"
+        }, {
+          "LEDFeedback(2)":"0"
+        }, {
+          "LEDFeedback(3)":"0"
+        }, {
+          "Set_Heating_Coil":"0"
+        } ]
+      }
+    } ]
+  },
+  "requirements":[ "subterra:data-service:objects:/default/seatheater${WorkItem}SEAT-79", "subterra:data-service:objects:/default/seatheater${WorkItem}SEAT-80", "subterra:data-service:objects:/default/seatheater${WorkItem}SEAT-81", "subterra:data-service:objects:/default/seatheater${WorkItem}SEAT-82", "subterra:data-service:objects:/default/seatheater${WorkItem}SEAT-83", "subterra:data-service:objects:/default/seatheater${WorkItem}SEAT-84", "subterra:data-service:objects:/default/seatheater${WorkItem}SEAT-85", "subterra:data-service:objects:/default/seatheater${WorkItem}SEAT-86" ],
+  "interface":{
+    "inputs":[ "SeatOccupied", "PowerMgtState", "ErrorStatus", "ButtonPressed" ],
+    "parameters":[ "TempStg_High", "TempStg_Low", "TempStg_Med" ],
+    "outputs":[ "LEDFeedback(1)", "LEDFeedback(2)", "LEDFeedback(3)", "Set_Heating_Coil" ]
+  },
+  "origin":{
+    "type":"manual",
+    "date":"17 Nov 2025, 09:46:14"
+  }
+}

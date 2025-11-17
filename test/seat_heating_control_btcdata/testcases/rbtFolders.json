@@ -1,3 +1,5 @@
 {
-  "Default Test Cases" : { }
+  "Default Test Cases" : {
+    "seat_heating_control" : [ "comprehensive heating cycle" ]
+  }
 }

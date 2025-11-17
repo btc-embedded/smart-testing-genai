@@ -1,0 +1,40 @@
+﻿Seat Heating Controller;;
+;;
+ID;Name;Description
+SHC-01;Activation Conditions;"The system shall only be active while the following conditions are met: 
+- the seat is occupied
+- the power status reads OK
+- there is no error (error flag: 0)"
+SHC-02;Reactivation;When the system is reactivated (activation conditions are once again met) it shall return to the same temperature stage that was active before.
+SHC-03;Initial Request;When the system is active but the button has not been pressed it shall initially be in the NO HEATING temperature stage
+SHC-04;Heating Cycle;"When active, the system shall cycle through four temperature stages on each button press:
+- high temperature
+- medium temperature
+- low temperature
+- no heating"
+SHC-05;No Heating;"When the system is active and is in the NO HEATING temperature stage:
+- it shall request no temperature
+- all LEDs shall be disabled"
+SHC-06;Low Heating;"When the system is active and is in the LOW temperature stage:
+- it shall request the low temperature level based on the parameter ""TempStg_Low""
+- only the first LED shall be enabled"
+SHC-07;Medium Heating;"When the system is active and is in the MEDIUM temperature stage:
+- it shall request the medium temperature level based on the parameter ""TempStg_Med""
+- only the first two LEDs shall be enabled"
+SHC-08;High Heating;"When the system is active and is in the HIGH temperature stage:
+- it shall request the medium temperature level based on the parameter ""TempStg_High""
+- all three LEDs shall be enabled"
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
